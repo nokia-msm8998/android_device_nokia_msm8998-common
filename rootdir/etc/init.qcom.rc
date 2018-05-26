@@ -474,6 +474,9 @@ on property:sys.boot_completed=1
     # Enable ZRAM
     swapon_all /vendor/etc/fstab.qcom
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
     write /dev/kmsg "Boot completed "
 
 on property:persist.vendor.radio.atfwd.start=false
