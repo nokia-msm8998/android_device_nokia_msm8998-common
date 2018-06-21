@@ -1,4 +1,5 @@
 # Power
 vendor.powerhal.audio                   u:object_r:power_prop:s0
 vendor.powerhal.init                    u:object_r:power_prop:s0
+vendor.powerhal.rendering               u:object_r:power_prop:s0
 vendor.powerhal.state                   u:object_r:power_prop:s0
