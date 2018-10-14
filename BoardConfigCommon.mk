@@ -157,9 +157,6 @@ include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 
-# Split selinux policy
-PRODUCT_FULL_TREBLE_OVERRIDE := true
-
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
 
