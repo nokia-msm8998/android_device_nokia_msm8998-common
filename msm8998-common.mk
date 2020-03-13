@@ -346,7 +346,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.sensors.sh \
     init.qcom.usb.sh \
-    init.msm.usb.configfs.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.target.rc \
