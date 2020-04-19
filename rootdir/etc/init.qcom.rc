@@ -523,7 +523,6 @@ service vendor.sensor-sh /vendor/bin/init.qcom.sensors.sh
 
 on property:vold.decrypt=trigger_restart_framework
     start vendor.qcom-c_main-sh
-    start wcnss-service
 
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
