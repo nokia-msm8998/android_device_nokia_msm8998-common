@@ -19,7 +19,7 @@ allow hal_power_default proc_touchpanel:file rw_file_perms;
 set_prop(hal_power_default, power_prop)
 
 # To dump
-allow hal_power_default cgroup:file read;
+allow hal_power_default cgroup:file rw_file_perms;
 
 # Allow libperfmgr to access double tap node
 allow hal_power_default proc_fih:file rw_file_perms;
