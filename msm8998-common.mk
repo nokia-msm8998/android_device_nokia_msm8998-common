@@ -270,6 +270,7 @@ PRODUCT_PACKAGES += \
     init.qti.ims.sh \
     init.qti.qseecomd.sh \
     init.qcom.sh \
+    init.qcom.sensors.sh \
     init.qcom.usb.sh \
     init.msm.usb.configfs.rc \
     init.qcom.rc \
