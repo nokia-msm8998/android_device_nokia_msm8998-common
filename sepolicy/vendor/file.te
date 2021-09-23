@@ -7,6 +7,9 @@ type debugfs_wlan, fs_type, debugfs_type;
 # DT2W
 type proc_touchpanel, file_type;
 
+# Proc
+type proc_bandinfo, proc_type, fs_type;
+
 # Sysfs
 type sysfs_msm_subsys, fs_type, sysfs_type;
 type sysfs_usb_device, sysfs_type, fs_type;
