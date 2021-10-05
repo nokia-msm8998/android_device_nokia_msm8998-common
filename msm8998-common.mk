@@ -47,7 +47,8 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libvolumelistener \
-    tinymix
+    tinymix.vendor \
+    tinyplay.vendor
 
 PRODUCT_PACKAGES += \
     libhdmiedid \
