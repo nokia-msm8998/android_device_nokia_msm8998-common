@@ -45,6 +45,7 @@ ro.carrier=unknown
 ro.com.android.dataroaming=true
 ro.telephony.call_ring.multiple=false
 telephony.lteOnCdmaDevice=1
+persist.sys.fflag.override.settings_provider_model=false
 
 # SurfaceFlinger
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
