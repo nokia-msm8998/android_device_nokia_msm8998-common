@@ -379,7 +379,6 @@ PRODUCT_PACKAGES += \
     init.qti.fm.sh \
     init.qti.ims.sh \
     init.qcom.sh \
-    init.qcom.sensors.sh \
     init.qcom.usb.sh \
     init.qcom.rc \
     init.recovery.qcom.rc \
