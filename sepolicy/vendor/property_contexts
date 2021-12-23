@@ -2,6 +2,9 @@
 camera.                                 u:object_r:vendor_camera_prop:s0
 persist.camera.fih_dbg.logs             u:object_r:vendor_camera_prop:s0
 
+# Sensors
+persist.pressure.diff                   u:object_r:vendor_default_prop:s0
+
 # Power
 vendor.powerhal.audio                   u:object_r:power_prop:s0
 vendor.powerhal.init                    u:object_r:power_prop:s0
