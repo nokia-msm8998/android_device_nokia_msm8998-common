@@ -31,6 +31,11 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 
+# Audio
+BOARD_SUPPORTS_SOUND_TRIGGER := true
+BOARD_USES_ALSA_AUDIO := true
+USE_XML_AUDIO_POLICY_CONF := 1
+
 # 64-bits binder
 TARGET_USES_64_BIT_BINDER := true
 
@@ -56,9 +61,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
-
-# Audio
-USE_XML_AUDIO_POLICY_CONF := 1
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
