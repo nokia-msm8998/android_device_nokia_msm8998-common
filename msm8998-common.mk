@@ -121,6 +121,9 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/perms/com.fihtdc.hardware.sensor.hall.xml:system/etc/permissions/com.fihtdc.hardware.sensor.hall.xml \
     $(COMMON_PATH)/configs/perms/com.fihtdc.inlifeui.settings.style.android.xml:system/etc/permissions/com.fihtdc.inlifeui.settings.style.android.xml
 
+# Public libraries
+    $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
 # Telephony-ext
 PRODUCT_PACKAGES += \
     telephony-ext
