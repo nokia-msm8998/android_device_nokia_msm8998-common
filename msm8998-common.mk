@@ -46,18 +46,16 @@ PRODUCT_PACKAGES += \
 
 # Boot control
 PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl.recovery \
+    bootctrl.msm8998.recovery
+
+PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service \
     bootctrl.msm8998 \
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.msm8998 \
-    libcutils \
-    libgptutils \
-    libz
 
 # Net
 PRODUCT_PACKAGES += \
