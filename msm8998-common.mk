@@ -116,10 +116,10 @@ PRODUCT_PACKAGES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/perms/com.evenwell.datacollect.xml:system/etc/permissions/com.evenwell.datacollect.xml \
-    $(COMMON_PATH)/configs/perms/com.fihtdc.datacollect.xml:system/etc/permissions/com.fihtdc.datacollect.xml \
-    $(COMMON_PATH)/configs/perms/com.fihtdc.hardware.sensor.hall.xml:system/etc/permissions/com.fihtdc.hardware.sensor.hall.xml \
-    $(COMMON_PATH)/configs/perms/com.fihtdc.inlifeui.settings.style.android.xml:system/etc/permissions/com.fihtdc.inlifeui.settings.style.android.xml
+    $(COMMON_PATH)/configs/perms/com.evenwell.datacollect.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.evenwell.datacollect.xml \
+    $(COMMON_PATH)/configs/perms/com.fihtdc.datacollect.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.fihtdc.datacollect.xml \
+    $(COMMON_PATH)/configs/perms/com.fihtdc.hardware.sensor.hall.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.fihtdc.hardware.sensor.hall.xml \
+    $(COMMON_PATH)/configs/perms/com.fihtdc.inlifeui.settings.style.android.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.fihtdc.inlifeui.settings.style.android.xml
 
 # Public libraries
     $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
