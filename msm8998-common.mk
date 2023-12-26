@@ -102,6 +102,35 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.common@1.0 \
+    android.hardware.camera.device@3.4 \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
+    android.hardware.camera.provider@2.5
+
+# Display
+PRODUCT_PACKAGES += \
+    gralloc.msm8998 \
+    hwcomposer.msm8998 \
+    memtrack.msm8998 \
+    libdisplayconfig \
+    liboverlay \
+    libtinyxml \
+    libqdMetaData \
+    libqdMetaData.system
+
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    android.frameworks.displayservice@1.0
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
