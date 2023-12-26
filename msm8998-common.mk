@@ -110,6 +110,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5
 
+# CNE
+PRODUCT_PACKAGES += \
+    libcnefeatureconfig
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8998 \
@@ -161,6 +165,8 @@ PRODUCT_PACKAGES += \
 
 # Net
 PRODUCT_PACKAGES += \
+    android.system.net.netd@1.0 \
+    libandroid_net \
     netutils-wrapper-1.0
 
 # NFC
@@ -168,6 +174,21 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     com.android.nfc_extras
+
+# OMX
+PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
+    libmm-omxcore \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc \
+    libOmxSwVencHevc \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefrighthw
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -247,6 +268,15 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(COMMON_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libaacwrapper \
+    libmediaextractorservice \
+    libnl
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
 
 # Inherit vendor makefiles
 $(call inherit-product, vendor/nokia/msm8998-common/msm8998-common-vendor.mk)
