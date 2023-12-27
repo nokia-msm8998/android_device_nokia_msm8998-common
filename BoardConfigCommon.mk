@@ -127,6 +127,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_NO_RECOVERY := true
 
+# QCOM
+BOARD_USES_QCOM_HARDWARE := true
+
 # Root
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /mnt/vendor/persist:/persist
