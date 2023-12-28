@@ -19,6 +19,7 @@ BOARD_VENDOR := nokia
 # Common device tree path
 COMMON_PATH := device/nokia/msm8998-common
 
+# Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
