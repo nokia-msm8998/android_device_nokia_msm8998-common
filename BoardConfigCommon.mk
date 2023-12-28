@@ -39,9 +39,6 @@ USE_CUSTOM_AUDIO_POLICY := 1
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
-# 64-bits binder
-TARGET_USES_64_BIT_BINDER := true
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
