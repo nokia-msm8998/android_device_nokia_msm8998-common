@@ -135,6 +135,9 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 # Split selinux policy
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
+# Treble
+BOARD_VNDK_VERSION := current
+
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
 
