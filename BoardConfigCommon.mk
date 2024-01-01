@@ -80,14 +80,6 @@ TARGET_NO_BOOTLOADER := true
 # Build flags
 BUILD_BROKEN_DUP_RULES := true
 
-# Dexpreopt
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    WITH_DEXPREOPT ?= true
-  endif
-endif
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
-
 # Display
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_SCREEN_DENSITY := 520
