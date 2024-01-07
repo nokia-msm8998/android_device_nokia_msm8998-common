@@ -239,6 +239,26 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.0 \
     android.hardware.radio.config@1.0
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.class_main.sh \
+    init.fih.smartamp_init.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qti.fm.sh \
+    init.qti.ims.sh \
+    init.qti.qseecomd.sh \
+    init.qcom.sh \
+    init.qcom.usb.sh \
+    init.msm.usb.configfs.rc \
+    init.fih.poweroff_charging.rc \
+    init.qcom.rc \
+    init.recovery.qcom.rc \
+    init.target.rc \
+    init.qcom.usb.rc \
+    fstab.qcom \
+    ueventd.qcom.rc
+
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
