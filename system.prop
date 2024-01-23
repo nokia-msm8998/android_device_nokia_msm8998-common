@@ -73,3 +73,6 @@ wifi.interface=wlan0
 
 # Voice assistant
 ro.opa.eligible_device=true
+
+# Recovery
+debug.fdsan=warn_once
