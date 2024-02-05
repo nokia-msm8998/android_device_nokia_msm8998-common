@@ -123,14 +123,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_NO_RECOVERY := true
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
-
-# Root Directories
 BOARD_ROOT_EXTRA_SYMLINKS := \
-    /mnt/vendor/persist:/persist \
-    /vendor/bt_firmware:/bt_firmware \
-    /vendor/dsp:/dsp \
-    /vendor/firmware_mnt:/firmware
+    /mnt/vendor/persist:/persist
 
 # Sepolicy
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
