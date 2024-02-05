@@ -16,6 +16,7 @@
 
 BOARD_VENDOR := nokia
 
+# Common device tree path
 COMMON_PATH := device/nokia/msm8998-common
 
 TARGET_ARCH := arm64
@@ -66,6 +67,9 @@ WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
 # Graphics
 TARGET_USES_HWC2 := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+
+# HIDL
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
