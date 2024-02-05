@@ -48,6 +48,7 @@ persist.radio.multisim.config=dsds
 persist.radio.oem_socket=true
 persist.radio.process_sups_ind=1
 persist.rcs.supported=0
+persist.radio.add_power_save=1
 ril.subscription.types=NV,RUIM
 rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
 ro.carrier=unknown
