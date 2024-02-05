@@ -118,3 +118,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # VNDK
 BOARD_VNDK_VERSION := current
+
+# Include vendor board config
+include vendor/nokia/msm8998-common/BoardConfigVendor.mk
