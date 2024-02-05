@@ -79,6 +79,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# Build flags
+BUILD_BROKEN_DUP_RULES := true
+
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
