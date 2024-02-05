@@ -74,8 +74,8 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
 PRODUCT_COPY_FILES += \
-    hardware/qcom-caf/msm8998/audio/configs/msm8998/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
-    hardware/qcom-caf/msm8998/audio/configs/msm8998/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tavil.txt
+    hardware/qcom-caf/$(TARGET_BOARD_PLATFORM)/audio/configs/msm8998/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
+    hardware/qcom-caf/$(TARGET_BOARD_PLATFORM)/audio/configs/msm8998/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tavil.txt
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -91,15 +91,12 @@ PRODUCT_PACKAGES += \
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl.recovery \
-    bootctrl.msm8998.recovery
+    bootctrl.$(TARGET_BOARD_PLATFORM).recovery
 
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service \
-    bootctrl.msm8998 \
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
+    bootctrl.$(TARGET_BOARD_PLATFORM)
 
 # Boot animation resolution
 TARGET_SCREEN_HEIGHT := 1920
@@ -120,9 +117,9 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    gralloc.msm8998 \
-    hwcomposer.msm8998 \
-    memtrack.msm8998 \
+    gralloc.$(TARGET_BOARD_PLATFORM) \
+    hwcomposer.$(TARGET_BOARD_PLATFORM) \
+    memtrack.$(TARGET_BOARD_PLATFORM) \
     libdisplayconfig \
     libtinyxml \
     libqdMetaData \
@@ -277,8 +274,12 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     init.qcom.usb.rc \
-    fstab.qcom \
     ueventd.qcom.rc
+
+ifneq ($(filter A1N,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
+PRODUCT_PACKAGES += \
+    fstab.qcom
+endif
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -300,7 +301,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
-    thermal.msm8998
+    thermal.$(TARGET_BOARD_PLATFORM)
 
 # Update engine
 PRODUCT_PACKAGES += \
