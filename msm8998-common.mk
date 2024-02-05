@@ -241,6 +241,15 @@ PRODUCT_COPY_FILES += \
 # Public libraries
     $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# QMI
+PRODUCT_PACKAGES += \
+    libjson \
+    libjson.vendor
+
+PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect \
+    libqti_vndfwk_detect.vendor
+
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.0 \
