@@ -165,6 +165,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@1.0-impl \
     android.hardware.health@1.0-service
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
+
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-service
