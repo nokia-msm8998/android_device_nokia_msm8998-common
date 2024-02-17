@@ -41,7 +41,6 @@ persist.ts.rtmakeup=false
 persist.vendor.camera.gyro.android=0
 persist.vendor.camera.gyro.disable=0
 persist.vendor.camera.tof.direct=1
-persist.vendor.overlay.izat.optin=rro
 ro.camera.record.anim.delay=200
 ro.camera.switch.anim.delay=300
 vendor.camera.aux.packagelist=com.evenwell.camera2,com.evenwell.fqc,com.tools.alt,com.hmdglobal.camera2
@@ -59,7 +58,6 @@ vendor.gralloc.enable_fb_ubwc=1
 
 # DRM
 drm.service.enabled=true
-ro.com.widevine.cachesize=16777216
 
 # Factory Reset Protection
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
@@ -96,21 +94,8 @@ persist.ims.enableDebugLogs=1
 persist.data.iwlan.enable=true
 
 # Media
-media.aac_51_output_enabled=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-media.stagefright.enable-aac=true
-media.stagefright.enable-http=true
-media.stagefright.enable-player=true
-media.stagefright.enable-qcp=true
-media.stagefright.enable-scan=true
-mm.enable.smoothstreaming=true
-mmp.enable.3g2=true
-persist.mm.enable.prefetch=true
-vendor.mm.enable.qcom_parser=13623295
 vidc.enc.dcvs.extra-buff-count=2
-
-# NTP Server
-persist.backup.ntpServer="0.pool.ntp.org"
 
 # Perf
 ro.vendor.at_library=libqti-at.so
@@ -132,7 +117,6 @@ vendor.rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
 # RmNet Data
 persist.data.df.agg.dl_pkt=10
 persist.data.df.agg.dl_size=4096
-persist.data.df.dev_name=rmnet_usb0
 persist.data.df.dl_mode=5
 persist.data.df.iwlan_mux=9
 persist.data.df.mux_count=8
