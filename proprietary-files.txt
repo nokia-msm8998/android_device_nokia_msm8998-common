@@ -270,11 +270,9 @@ vendor/lib64/vendor.qti.gnss@2.1.so
 vendor/lib64/vendor.qti.gnss@3.0-service.so
 vendor/lib64/vendor.qti.gnss@3.0.so
 
-# Gatekeeper
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+# Gatekeeper - from A1N_sprout - QKQ1.190828.002
+vendor/lib/hw/gatekeeper.msm8998.so|06260864e6e54b4d7eff8d80e49c3b229388746a
+vendor/lib64/hw/gatekeeper.msm8998.so|edfaffc6e289a998b955affd1d469f8a6c7b4a13
 
 # Graphics
 vendor/lib64/egl/eglSubDriverAndroid.so
@@ -336,17 +334,9 @@ vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
-# Keymaster
-vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
-vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
-vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
-vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
-vendor/lib/libkeymasterdeviceutils.so
-vendor/lib/libkeymasterprovision.so
-vendor/lib/libkeymasterutils.so
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterprovision.so
-vendor/lib64/libkeymasterutils.so
+# Keystore - from A1N_sprout - QKQ1.190828.002
+vendor/lib/hw/keystore.msm8998.so|7ce29b1848f7ff4875918f5bdc996910a8046c9d
+vendor/lib64/hw/keystore.msm8998.so|68be3e488242336bc3c8a85db4a0393a581e8846
 
 # Listen
 vendor/lib/hw/sound_trigger.primary.sdm660.so:vendor/lib/hw/sound_trigger.primary.msm8998.so
