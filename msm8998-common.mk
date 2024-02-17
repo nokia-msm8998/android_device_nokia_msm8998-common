@@ -291,6 +291,9 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor
 
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
+
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.0 \
