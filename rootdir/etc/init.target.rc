@@ -123,6 +123,13 @@ on boot
     setprop vendor.usb.qdss.inst.name "qdss"
     setprop sys.usb.configfs 1
 
+on property:vendor.post_boot.parsed=1
+    # IRQ Tuning
+    # IRQ 502: mdss
+    # IRQ 202: kgsl_3d0
+    write /proc/irq/502/smp_affinity_list 7
+    write /proc/irq/202/smp_affinity_list 6
+
 #Peripheral manager
 service vendor.per_mgr /vendor/bin/pm-service
     class core
