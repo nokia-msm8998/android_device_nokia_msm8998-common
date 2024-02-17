@@ -160,6 +160,18 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.0-impl-qti \
+    android.hardware.gnss@2.0-service-qti \
+    libbatching \
+    libgeofencing \
+    libgnss \
+    libgps.utils \
+    liblocation_api \
+    libsensorndkbridge \
+    libwifi-hal-ctrl
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
