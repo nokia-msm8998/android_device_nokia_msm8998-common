@@ -147,6 +147,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Vendor security patch level
+VENDOR_SECURITY_PATCH := 2021-01-01
+
 # VNDK
 BOARD_VNDK_VERSION := current
 
