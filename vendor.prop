@@ -64,7 +64,6 @@ drm.service.enabled=true
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Fingerprint
-qemu.hw.mainkeys=1
 ro.boot.gxfp_lv=true
 sys.gxfp.lv=1
 
