@@ -82,6 +82,9 @@ TARGET_NO_BOOTLOADER := true
 # Build flags
 BUILD_BROKEN_DUP_RULES := true
 
+# Camera
+MALLOC_SVELTE_FOR_LIBC32 := true
+
 # Display
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_SCREEN_DENSITY := 520
