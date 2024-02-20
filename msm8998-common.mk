@@ -428,8 +428,11 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    android.system.net.netd@1.0 \
+    android.system.net.netd@1.0.vendor \
     android.hardware.wifi@1.0-service \
     hostapd \
+    libandroid_net \
     libwifi-hal-qcom \
     wcnss_service \
     WifiOverlay \
