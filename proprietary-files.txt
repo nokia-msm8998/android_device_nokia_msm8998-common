@@ -1,6 +1,9 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
 ## are from DDV_sprout (00WW_2_400).
 
+# Amplifier calibration - from A1N_sprout - QKQ1.190828.002
+vendor/etc/audio/silence_48k.wav|26df84a9ba771f568ae58f69a248cea4ce8b6209
+
 # ANT+
 -lib/libantradio.so
 -lib64/libantradio.so
