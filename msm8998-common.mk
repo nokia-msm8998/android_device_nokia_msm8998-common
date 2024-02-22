@@ -428,6 +428,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
 
+# VNDK
+PRODUCT_PACKAGES += \
+    libstdc++.vendor
+
 # Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
