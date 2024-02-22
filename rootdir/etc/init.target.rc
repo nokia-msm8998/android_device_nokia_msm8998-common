@@ -227,6 +227,14 @@ on property:init.svc.zygote=running
 on property:init.svc.zygote=restarting
     stop ppd
 
+on property:ro.boot.simslot=1
+    setprop persist.radio.multisim.config ssss
+    setprop ro.telephony.default_network 22
+
+on property:ro.boot.simslot=2
+    setprop persist.radio.multisim.config dsds
+    setprop ro.telephony.default_network 22,20
+
 # Wireless init for wlan_mac.bin
 service wireless-init /system/vendor/bin/wireless_init -i
     class main
