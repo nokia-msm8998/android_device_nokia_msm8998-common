@@ -16,10 +16,6 @@
 
 COMMON_PATH := device/nokia/msm8998-common
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(COMMON_PATH)/overlay
-
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -265,6 +261,10 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(COMMON_PATH)/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
