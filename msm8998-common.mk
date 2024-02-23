@@ -441,6 +441,7 @@ PRODUCT_PACKAGES += \
     hostapd \
     libandroid_net \
     libwifi-hal-qcom \
+    libwpa_client \
     wcnss_service \
     WifiOverlay \
     TetheringConfigOverlay \
