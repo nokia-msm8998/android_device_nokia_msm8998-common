@@ -336,7 +336,7 @@ vendor/lib/hw/vulkan.msm8998.so|1f1e27bf3254cebbc1c0aa961c83a67f2ba8aa66
 vendor/lib64/hw/vulkan.msm8998.so|ba974da34ad96003e77de2bece70d3eeaa758988
 
 # Health
-vendor/bin/hw/android.hardware.health@2.0-service
+vendor/bin/hw/android.hardware.health@2.0-service|b00fe44b63eb8d803d0c2201731417a6211c8790
 vendor/etc/init/android.hardware.health@2.0-service.rc
 
 # IRQ balance
