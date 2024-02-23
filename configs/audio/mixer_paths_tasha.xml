@@ -3144,6 +3144,9 @@
     <path name="afe-proxy">
     </path>
 
+    <path name="echo-ref-record">
+    </path>
+
     <path name="anc-headphones">
         <ctl name="ANC Function" value="ON" />
         <ctl name="ANC Slot" value="0" />
