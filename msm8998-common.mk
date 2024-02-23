@@ -328,6 +328,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power.stats@1.0-service.mock \
     android.hardware.power-service.nokia_msm8998-libperfmgr
 
 PRODUCT_COPY_FILES += \
