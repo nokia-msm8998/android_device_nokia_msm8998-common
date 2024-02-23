@@ -333,6 +333,10 @@ vendor/lib64/libtinyxml2_1.so|70942325afdd14eedcf11b3fbbfbc3d98f42f8dc
 vendor/lib/hw/vulkan.msm8998.so|65211c879229c7e29f2cd72af01ef1f40a5fe6d0
 vendor/lib64/hw/vulkan.msm8998.so|d9c347b5fcd1c821c4b1d958a82f1b992257f127
 
+# Health
+vendor/bin/hw/android.hardware.health@2.0-service
+vendor/etc/init/android.hardware.health@2.0-service.rc
+
 # IRQ balance
 vendor/bin/msm_irqbalance
 
