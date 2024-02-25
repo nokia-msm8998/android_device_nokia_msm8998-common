@@ -404,6 +404,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libshim_cutils
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    $(COMMON_PATH)
+
 # Telephony-ext
 PRODUCT_PACKAGES += \
     telephony-ext
