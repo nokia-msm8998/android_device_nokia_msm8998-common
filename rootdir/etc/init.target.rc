@@ -135,6 +135,12 @@ on boot
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop vendor.usb.qdss.inst.name "qdss"
 
+# Smartamp
+service amp-init-sh /vendor/bin/init.fih.smartamp_init.sh
+    class late_start
+    user system
+    oneshot
+
 #Peripheral manager
 service vendor.per_mgr /vendor/bin/pm-service
     class core
