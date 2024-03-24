@@ -30,6 +30,7 @@ vendor.voice.path.for.pcm.voip=false
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac
 persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxhd-aac
 persist.vendor.btstack.enable.splita2dp=true
+persist.vendor.qcom.bluetooth.scram.enabled=false
 vendor.bluetooth.soc=cherokee
 vendor.qcom.bluetooth.soc=cherokee
 
@@ -55,6 +56,9 @@ vendor.gralloc.enable_fb_ubwc=1
 
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
+
+# DPM
+persist.vendor.dpmhalservice.enable=1
 
 # DRM
 drm.service.enabled=true
@@ -110,6 +114,7 @@ sys.games.gt.prof=1
 # Radio
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
+persist.vendor.radio.enableadvancedscan=0
 persist.vendor.radio.lte_vrte_ltd=1
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
