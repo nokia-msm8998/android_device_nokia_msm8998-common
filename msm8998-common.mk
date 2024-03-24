@@ -82,7 +82,8 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio@2.0-impl \
-    vendor.qti.hardware.btconfigstore@1.0.vendor
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
 
 # Boot control
 PRODUCT_PACKAGES += \
@@ -110,6 +111,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5 \
     vendor.qti.hardware.camera.device@1.0
 
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8998 \
@@ -135,8 +140,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service
+    android.hardware.drm@1.4 \
+    android.hardware.drm@1.4.vendor \
+    android.hardware.drm@1.4-service.clearkey
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -163,8 +169,8 @@ endif
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.0-impl-qti \
-    android.hardware.gnss@2.0-service-qti \
+    android.hardware.gnss@2.1-impl-qti \
+    android.hardware.gnss@2.1-service-qti \
     libbatching \
     libgeofencing \
     libgnss \
@@ -250,6 +256,7 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
+    libavservices_minijail.vendor \
     libc2dcolorconvert \
     libmm-omxcore \
     libOmxAacEnc \
@@ -341,7 +348,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor
+    libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni \
+    libvndfwk_detect_jni.vendor
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
@@ -353,13 +362,13 @@ PRODUCT_COPY_FILES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.1 \
-    android.hardware.radio.config@1.0 \
-    android.hardware.secure_element@1.0 \
-    rild \
-    librmnetctl \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.secure_element@1.2.vendor \
+    CarrierConfigOverlay \
     libxml2 \
-    CarrierConfigOverlay
+    librmnetctl
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -392,10 +401,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(COMMON_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
-
-# Shims
-PRODUCT_PACKAGES += \
-    libshim_cutils
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \

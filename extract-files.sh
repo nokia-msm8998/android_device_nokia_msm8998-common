@@ -55,13 +55,12 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        # Shim libdpmframework
-        product/lib64/libdpmframework.so)
-            "${PATCHELF}" --add-needed "libshim_cutils.so" "${2}"
+	# Patch soundtrigger to act like it's a blob for msm8998.
+        vendor/lib/hw/sound_trigger.primary.msm8998.so|vendor/lib64/hw/sound_trigger.primary.msm8998.so)
+            "${PATCHELF}" --set-soname "sound_trigger.primary.msm8998.so" "${2}"
             ;;
-        # Health
-        vendor/bin/hw/android.hardware.health@2.0-service)
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+        product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml|product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
+            sed -i 's/version="2.0"/version="1.0"/g' "${2}"
             ;;
     esac
 }
