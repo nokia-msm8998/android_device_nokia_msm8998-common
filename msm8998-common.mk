@@ -373,7 +373,6 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.class_main.sh \
     init.fih.smartamp_init.sh \
     init.qcom.early_boot.sh \
     init.qti.fm.sh \
