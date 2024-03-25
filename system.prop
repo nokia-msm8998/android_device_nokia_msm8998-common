@@ -22,6 +22,9 @@ vendor.camera.aux.packagelist=com.evenwell.camera2,com.tools.alt,com.hmdglobal.c
 ro.charger.disable_init_blank=true
 ro.charger.enable_suspend=true
 
+# Crypto
+ro.crypto.volume.options=aes-256-xts
+
 # Data
 persist.data.netmgrd.qos.enable=true
 persist.data.iwlan.enable=true
