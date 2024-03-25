@@ -376,7 +376,6 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.fih.smartamp_init.sh \
     init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
     init.qti.fm.sh \
     init.qti.ims.sh \
     init.qcom.sh \
