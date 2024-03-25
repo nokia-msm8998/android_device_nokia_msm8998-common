@@ -19,3 +19,6 @@ allow hal_power_default cgroup:file read;
 
 # Allow libperfmgr to access double tap node
 allow hal_power_default proc_fih:file rw_file_perms;
+
+# Hide dac_override spam
+dontaudit hal_power_default self:capability dac_override;
