@@ -452,6 +452,9 @@
         <item>"/system/framework/boot-core-libart.vdex"</item>
     </string-array>
 
+    <!-- Enable video pause workaround when enabling/disabling the camera. -->
+    <bool name="config_useVideoPauseWorkaround">true</bool>
+
     <!-- Should the pinner service pin the Camera application? -->
     <bool name="config_pinnerCameraApp">true</bool>
 
