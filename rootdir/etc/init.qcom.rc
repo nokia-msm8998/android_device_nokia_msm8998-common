@@ -457,7 +457,6 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wdsp0/boot
     chown media audio /sys/kernel/wcd_cpe0/fw_name
 
-    start vendor.qcom-post-boot
     start qti-testscripts
 
     # Start perf
@@ -465,6 +464,12 @@ on property:sys.boot_completed=1
 
     # Enable ZRAM
     swapon_all /vendor/etc/fstab.qcom
+
+    # Let kernel know our image version/variant/crm_version
+    write /sys/devices/soc0/select_image 10
+    write /sys/devices/soc0/image_version "10:${ro.build.id}:${ro.build.version.incremental}"
+    write /sys/devices/soc0/image_variant "${ro.product.name}-${ro.build.type}"
+    write /sys/devices/soc0/image_crm_version "${ro.build.version.codename}"
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
@@ -714,13 +719,6 @@ service vendor.qcom-sh /vendor/bin/init.qcom.sh
 service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
     class core
     user root
-    oneshot
-
-service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
-    class late_start
-    user root
-    group root system wakelock graphics
-    disabled
     oneshot
 
 service qti-testscripts /system/bin/sh /system/etc/init.qcom.testscripts.sh
