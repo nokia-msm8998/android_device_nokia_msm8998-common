@@ -37,6 +37,7 @@ debug.sf.latch_unsignaled=1
 ro.vendor.display.cabl=2
 sdm.debug.disable_skip_validate=1
 sdm.perf_hint_window=50
+debug.hwui.renderer=skiagl
 
 # OEM Unlock
 ro.oem_unlock_supported=1
