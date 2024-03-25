@@ -80,13 +80,11 @@ persist.vendor.qcom.bluetooth.soc=cherokee
 vendor.bluetooth.soc=cherokee
 
 # Camera
-camera.disable_zsl_mode=1
 persist.vendor.camera.gyro.android=0
 persist.vendor.camera.gyro.disable=0
 persist.vendor.camera.tof.direct=1
 persist.vendor.camera.HAL3.enabled=1
 persist.vendor.camera.ois.disable=0
-vendor.camera.aux.packagelist=com.evenwell.camera2,com.tools.alt,com.hmdglobal.camera2,org.codeaurora.snapcam
 vendor.voice.path.for.pcm.voip=false
 
 # CNE
