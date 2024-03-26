@@ -467,6 +467,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
 
+# Verity
+# Only needed for signing
+BOARD_AVB_ENABLE := false
+
 # VNDK
 PRODUCT_PACKAGES += \
     libstdc++.vendor
