@@ -40,6 +40,9 @@ sdm.debug.disable_skip_validate=1
 sdm.perf_hint_window=50
 debug.hwui.renderer=skiagl
 
+# Fastbootd
+ro.fastbootd.available=true
+
 # OEM Unlock
 ro.oem_unlock_supported=1
 
