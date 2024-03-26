@@ -55,10 +55,6 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-	# Patch soundtrigger to act like it's a blob for msm8998.
-        vendor/lib/hw/sound_trigger.primary.msm8998.so|vendor/lib64/hw/sound_trigger.primary.msm8998.so)
-            "${PATCHELF}" --set-soname "sound_trigger.primary.msm8998.so" "${2}"
-            ;;
         product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml|product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
             sed -i 's/version="2.0"/version="1.0"/g' "${2}"
             ;;
