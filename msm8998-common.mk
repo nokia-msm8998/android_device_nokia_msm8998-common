@@ -391,11 +391,14 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.sh \
     init.qcom.rc \
-    init.recovery.qcom.rc \
     init.target.rc \
     init.qcom.usb.rc \
     fstab.qcom \
     ueventd.qcom.rc
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/etc/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
 # Seccomp
 PRODUCT_COPY_FILES += \
