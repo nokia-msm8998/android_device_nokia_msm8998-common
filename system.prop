@@ -39,6 +39,7 @@ ro.vendor.display.cabl=2
 sdm.debug.disable_skip_validate=1
 sdm.perf_hint_window=50
 debug.hwui.renderer=skiagl
+debug.renderengine.backend=skiaglthreaded
 
 # Disable Skia tracing by default
 debug.hwui.skia_atrace_enabled=false
