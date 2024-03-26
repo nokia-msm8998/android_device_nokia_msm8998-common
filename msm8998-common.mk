@@ -430,7 +430,9 @@ PRODUCT_COPY_FILES += \
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
-    $(COMMON_PATH)
+    $(COMMON_PATH) \
+    hardware/google/pixel \
+    hardware/google/interfaces
 
 # Telephony
 PRODUCT_PACKAGES += \
