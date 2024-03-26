@@ -465,6 +465,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+# TinyXML
+PRODUCT_PACKAGES += \
+    libtinyxml
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
