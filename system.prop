@@ -37,6 +37,9 @@ sdm.debug.disable_skip_validate=1
 sdm.perf_hint_window=50
 debug.hwui.renderer=skiagl
 
+# Disable Skia tracing by default
+debug.hwui.skia_atrace_enabled=false
+
 # Fastbootd
 ro.fastbootd.available=true
 
