@@ -31,3 +31,6 @@ on fs
 
 on init
     setprop sys.usb.configfs 1
+
+    # Workaround for broken recovery
+    setprop debug.fdsan warn_once
