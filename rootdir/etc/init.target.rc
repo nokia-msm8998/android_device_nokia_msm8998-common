@@ -28,6 +28,7 @@
 #
 
 on early-init
+    rm /persist/bluetooth/.bt_nv.bin
     write /proc/sys/kernel/sched_boost 1
 
 on init
