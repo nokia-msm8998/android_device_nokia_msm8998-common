@@ -199,10 +199,6 @@ on late-fs
     # Mount RW partitions which need to run fsck
     mount_all /vendor/etc/fstab.qcom --late
 
-on late-fs
-    # Mount RW partitions which need to run fsck
-    mount_all /vendor/etc/fstab.qcom --late
-
 # For cpusets initialize for Silver Only first and then Silver + Gold
 # Silver Only configuration cannot work with 0-7
 on boot
