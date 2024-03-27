@@ -27,6 +27,7 @@
 
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.target.rc
+import /vendor/etc/init/hw/init.fih.poweroff_charging.rc
 import /vendor/etc/init/hw/init.${ro.boot.device}.target.rc
 
 on early-init
