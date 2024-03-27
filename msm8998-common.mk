@@ -378,6 +378,7 @@ PRODUCT_PACKAGES += \
     init.qti.ims.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
+    init.fih.poweroff_charging.rc \
     init.qcom.rc \
     init.target.rc \
     init.qcom.usb.rc \
