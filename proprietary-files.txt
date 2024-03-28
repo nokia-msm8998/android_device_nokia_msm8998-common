@@ -1012,6 +1012,6 @@ vendor/lib64/libmmsw_platform.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 
-# Wi-Fi
-vendor/bin/cnss_diag
-vendor/bin/cnss-daemon
+# Wi-Fi - from DDV_sprout - QKQ1.191014.001
+vendor/bin/cnss-daemon|741bed84faf4bf0c2c83f37b89fe699f6784d41c
+vendor/bin/cnss_diag|fc7713617502de76ce7935f69d66d512a4bf4446
