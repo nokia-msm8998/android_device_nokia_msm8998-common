@@ -147,6 +147,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
