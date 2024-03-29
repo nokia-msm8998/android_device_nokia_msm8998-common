@@ -494,7 +494,7 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.1 \
     android.system.net.netd@1.1.vendor \
     android.hardware.wifi.hostapd@1.0.vendor \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi-service \
     hostapd \
     libandroid_net \
     libwifi-hal-qcom \
