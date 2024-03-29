@@ -10,6 +10,7 @@ tunnel.decode=false
 # Bluetooth
 bt.max.hfpclient.connections=1
 persist.bluetooth.a2dp_offload.disabled=true
+persist.vendor.bt.a2dp.aac_whitelist=false
 ro.bluetooth.a4wp=false
 ro.bluetooth.emb_wp_mode=true
 ro.bluetooth.library_name=libbluetooth_qti.so
