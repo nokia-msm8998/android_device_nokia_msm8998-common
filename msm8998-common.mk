@@ -517,7 +517,6 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     libwifi-hal-qcom \
     libwpa_client \
-    netutils-wrapper-1.0 \
     wcnss_service \
     WifiOverlay \
     wpa_supplicant \
