@@ -1,3 +1,8 @@
+allow system_app proc_pagetypeinfo:file { read };
+allow system_app proc_vmallocinfo:file { read };
+
+allow system_app zygote:unix_stream_socket { getopt };
+
 binder_call(system_app, hal_audio_default)
 binder_call(system_app, hal_health_default)
 binder_call(system_app, hal_power_default)
