@@ -353,6 +353,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    libqti-perfd-client \
     android.hardware.power.stats@1.0-service.mock \
     android.hardware.power-service.nokia-libperfmgr
 
