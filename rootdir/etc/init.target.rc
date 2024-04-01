@@ -326,24 +326,6 @@ on property:ro.boot.simslot=2
     setprop persist.radio.multisim.config dsds
     setprop ro.telephony.default_network 22,20
 
-# Wireless init for wlan_mac.bin
-service wireless-init /system/vendor/bin/wireless_init -i
-    class main
-    user system
-    group system
-    oneshot
-
-service energy-awareness /system/vendor/bin/energy-awareness
-    class main
-    user root
-    group system
-    oneshot
-
-service mdtpd /system/vendor/bin/mdtpd
-    class late_start
-    user root
-    group system radio drmrpc
-
 service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
     class main
     user root
