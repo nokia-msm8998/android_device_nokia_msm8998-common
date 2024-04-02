@@ -991,7 +991,6 @@ vendor/etc/init/imsrcsd.rc
 vendor/etc/init/ims_rtp_daemon_legacy.rc
 vendor/etc/init/init-qcril-data.rc
 vendor/etc/init/init.qdmastats.rc
-vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
 vendor/etc/seccomp_policy/imsrtp.policy
