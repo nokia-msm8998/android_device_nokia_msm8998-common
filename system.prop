@@ -10,17 +10,6 @@ tunnel.audiovideo.decode=false
 tunnel.decode=false
 persist.audio.fluence.voicecomm=true
 
-# Bluetooth
-bt.max.hfpclient.connections=1
-persist.bluetooth.a2dp_offload.disabled=true
-persist.vendor.bt.a2dp.aac_whitelist=false
-persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac
-persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxhd-aac
-ro.bluetooth.a4wp=false
-ro.bluetooth.emb_wp_mode=true
-ro.bluetooth.library_name=libbluetooth_qti.so
-ro.bluetooth.wipower=true
-
 # Camera
 camera.disable_zsl_mode=1
 vendor.camera.aux.packagelist=com.evenwell.camera2,com.tools.alt,com.hmdglobal.camera2,org.codeaurora.snapcam
