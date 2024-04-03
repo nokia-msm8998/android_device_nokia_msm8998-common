@@ -168,15 +168,10 @@ endif
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-impl-qti \
-    android.hardware.gnss@2.1-service-qti \
-    libbatching \
-    libgeofencing \
-    libgnss \
-    libgps.utils \
-    liblocation_api \
-    libsensorndkbridge \
-    libwifi-hal-ctrl
+    android.hardware.gnss@1.1 \
+    android.hardware.gnss@1.1.vendor \
+    android.hardware.gnss@2.1 \
+    android.hardware.gnss@2.1.vendor
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/gps/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
