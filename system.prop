@@ -15,7 +15,6 @@ camera.disable_zsl_mode=1
 vendor.camera.aux.packagelist=com.evenwell.camera2,com.tools.alt,com.hmdglobal.camera2,org.codeaurora.snapcam
 
 # Charger
-ro.charger.disable_init_blank=true
 ro.charger.enable_suspend=true
 
 # Data
