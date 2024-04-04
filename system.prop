@@ -14,9 +14,6 @@ persist.audio.fluence.voicecomm=true
 camera.disable_zsl_mode=1
 vendor.camera.aux.packagelist=com.evenwell.camera2,com.tools.alt,com.hmdglobal.camera2,org.codeaurora.snapcam
 
-# Charger
-ro.charger.disable_init_blank=true
-
 # Crypto
 ro.crypto.volume.options=aes-256-xts
 
