@@ -26,5 +26,5 @@
 #
 
 # Offline charging
-on charger
+on property:init.svc.vendor.charger=running
     setprop debug.fdsan warn_once

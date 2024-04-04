@@ -189,6 +189,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     $(COMMON_PATH)/configs/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health-service.qti
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
