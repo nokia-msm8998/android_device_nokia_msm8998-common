@@ -19,59 +19,30 @@ vendor/lib64/libsdsprpc.so
 # Amplifier calibration - from A1N_sprout - QKQ1.190828.002
 vendor/etc/audio/silence_48k.wav|26df84a9ba771f568ae58f69a248cea4ce8b6209
 
-# ANT+
-system_ext/lib/com.qualcomm.qti.ant@1.0.so
-system_ext/lib64/com.qualcomm.qti.ant@1.0.so
-vendor/lib/hw/com.dsi.ant@1.0-impl.so
-vendor/lib64/hw/com.dsi.ant@1.0-impl.so
-vendor/lib/com.dsi.ant@1.0.so
-vendor/lib64/com.dsi.ant@1.0.so
+# ANT+ - from FP3 - 6.A.025.0
+vendor/lib/hw/com.dsi.ant@1.0-impl.so|5afa58aa4e28a093b60fbe4fe88d40bcd5019da8
+vendor/lib64/hw/com.dsi.ant@1.0-impl.so|6e2b594b44552b42000164c091af5cf7a4c508f5
+vendor/lib/com.dsi.ant@1.0.so|9dac2832146e53a59c2f33a725df8a0ab25b3766
+vendor/lib64/com.dsi.ant@1.0.so|2b9e399c5abf8b54b9d0329b2315e3ec87f13ae0
 
-# Alarm
--product/app/PowerOffAlarm/PowerOffAlarm.apk
--system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
-system_ext/lib/vendor.qti.hardware.alarm@1.0.so
-system_ext/lib64/vendor.qti.hardware.alarm@1.0.so
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
-vendor/bin/power_off_alarm
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
-vendor/lib/hw/vendor.qti.hardware.alarm@1.0-impl.so
-vendor/lib/vendor.qti.hardware.alarm@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+# Alarm - from FP3 - 6.A.025.0
+product/app/PowerOffAlarm/PowerOffAlarm.apk:system_ext/app/PowerOffAlarm/PowerOffAlarm.apk|c7a8a195c47e1a3386173106ff6e2a68403b2e14
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|e8f29b90facd4d605dca41644f5a0dc77f6d2e9b
+vendor/bin/power_off_alarm|b41ffb912ae8db9c3abd7e3c94e9e77160cf7ff6
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|fdc8542c93c3e0572a172040bb6bb741baba348e
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|f34f3f363932160ef659ec21543b0d33f0215dbc
 
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
-vendor/lib/libbt-hidlclient.so
-vendor/lib/libbtnv.so
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
-vendor/lib64/libbt-hidlclient.so
-vendor/lib64/libbtnv.so
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
-
-# Bluetooth (A2DP)
-vendor/lib/hw/audio.bluetooth_qti.default.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/btaudio_offload_if.so
-vendor/lib/libbluetooth_audio_session_qti.so
-vendor/lib/libbluetooth_audio_session_qti_2_1.so
-vendor/lib64/hw/audio.bluetooth_qti.default.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
-vendor/lib64/btaudio_offload_if.so
-vendor/lib64/libbluetooth_audio_session_qti.so
-vendor/lib64/libbluetooth_audio_session_qti_2_1.so
+# Bluetooth - from FP3 - 6.A.025.0
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|73d7132773572d87bdac6b5e454573e79d35316c
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|1e238b1e84d889f424001f5134f0d2994d13251a
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|68848631511ed0117adc540725d0e2fa57843bd9
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|05e2d1fd44260cf603eb40a9f795d9ff4c43226f
+vendor/lib64/libbtnv.so|82cc941c6a262e0965925b4955b1ea508b798bfa
+vendor/lib64/libsoc_helper.so|affbc1cc49d3df3a6e174a21bf3fe79c7130d1c0
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|25b2ce43c28c274b15c3b683831c214e3efb531d
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|117b74f1df4ee67297f431ae47d622bbb8f587ca
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -613,11 +584,15 @@ vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 
-# Peripheral
-vendor/bin/pm-proxy
-vendor/bin/pm-service
-vendor/lib/libperipheral_client.so
-vendor/lib64/libperipheral_client.so
+# PD mapper - from FP3 - 6.A.025.0
+vendor/bin/pd-mapper|8eb9717d2ee4da59c64ec89a85bf4e384663322b
+vendor/lib64/libpdmapper.so|dd589e58135e9ef3c952c5d0af9dce2c91df5014
+vendor/lib64/libpdnotifier.so|8e7b07e2b16c3931b93605deb38f2452ff57037b
+
+# Peripheral manager - from FP3 - 6.A.025.0
+vendor/bin/pm-proxy|910437c11108aa66e803bbc760ce3998d141a6b4
+vendor/bin/pm-service|98827a6bf6693033a7c767e3fb4f097b9075a0ef
+vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
 # Postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
