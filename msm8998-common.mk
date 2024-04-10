@@ -70,8 +70,8 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
 PRODUCT_COPY_FILES += \
-    hardware/qcom-caf/$(TARGET_BOARD_PLATFORM)/audio/configs/msm8998/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
-    hardware/qcom-caf/$(TARGET_BOARD_PLATFORM)/audio/configs/msm8998/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tavil.txt
+    hardware/qcom-caf/$(TARGET_NOKIA_PLATFORM)/audio/configs/msm8998/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
+    hardware/qcom-caf/$(TARGET_NOKIA_PLATFORM)/audio/configs/msm8998/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tavil.txt
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -90,12 +90,12 @@ PRODUCT_PACKAGES += \
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl.recovery \
-    bootctrl.$(TARGET_BOARD_PLATFORM).recovery
+    bootctrl.$(TARGET_NOKIA_PLATFORM).recovery
 
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service \
-    bootctrl.$(TARGET_BOARD_PLATFORM)
+    bootctrl.$(TARGET_NOKIA_PLATFORM)
 
 # Boot animation resolution
 TARGET_SCREEN_HEIGHT := 1920
@@ -116,9 +116,9 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    gralloc.$(TARGET_BOARD_PLATFORM) \
-    hwcomposer.$(TARGET_BOARD_PLATFORM) \
-    memtrack.$(TARGET_BOARD_PLATFORM) \
+    gralloc.$(TARGET_NOKIA_PLATFORM) \
+    hwcomposer.$(TARGET_NOKIA_PLATFORM) \
+    memtrack.$(TARGET_NOKIA_PLATFORM) \
     libdisplayconfig \
     libtinyxml \
     libqdMetaData \
@@ -238,7 +238,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service \
-    lights.$(TARGET_BOARD_PLATFORM)
+    lights.$(TARGET_NOKIA_PLATFORM)
 
 # Lineage Health
 PRODUCT_PACKAGES += \
