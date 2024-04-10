@@ -155,7 +155,9 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 
 # Vendor
+ifneq ($(PRODUCT_FULL_TREBLE_OVERRIDE), true)
 TARGET_COPY_OUT_VENDOR := vendor
+endif
 
 # Vendor security patch level
 VENDOR_SECURITY_PATCH := 2022-10-01
