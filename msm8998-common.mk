@@ -411,11 +411,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     ueventd.qcom.rc
 
-ifneq ($(filter A1N,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
-PRODUCT_PACKAGES += \
-    fstab.qcom
-endif
-
 # Recovery
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/etc/init.recovery.qcom.rc:root/init.recovery.qcom.rc
