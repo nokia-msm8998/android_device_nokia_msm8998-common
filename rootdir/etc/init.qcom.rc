@@ -818,14 +818,6 @@ service vendor.LKCore-rel /vendor/bin/LKCore
 on boot && property:persist.sys.usb.config=*
     setprop sys.usb.config ${persist.sys.usb.config}
 
-#add poweroffhandler
-service poweroffhandler /system/vendor/bin/poweroffhandler
-    class core
-    user media
-    group graphics audio
-    disabled
-    oneshot
-
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
     group system
