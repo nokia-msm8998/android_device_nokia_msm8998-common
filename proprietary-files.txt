@@ -33,16 +33,38 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|fdc8542c93c3e0572a172040bb6bb741baba348e
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|f34f3f363932160ef659ec21543b0d33f0215dbc
 
-# Bluetooth - from FP3 - 6.A.025.0
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|73d7132773572d87bdac6b5e454573e79d35316c
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|1e238b1e84d889f424001f5134f0d2994d13251a
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|68848631511ed0117adc540725d0e2fa57843bd9
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|05e2d1fd44260cf603eb40a9f795d9ff4c43226f
-vendor/lib64/libbtnv.so|82cc941c6a262e0965925b4955b1ea508b798bfa
-vendor/lib64/libsoc_helper.so|affbc1cc49d3df3a6e174a21bf3fe79c7130d1c0
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|25b2ce43c28c274b15c3b683831c214e3efb531d
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|117b74f1df4ee67297f431ae47d622bbb8f587ca
+# Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
+vendor/lib/libbt-hidlclient.so
+vendor/lib/libbtnv.so
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
+vendor/lib64/libbt-hidlclient.so
+vendor/lib64/libbtnv.so
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
+
+# Bluetooth (A2DP)
+vendor/lib/hw/audio.bluetooth_qti.default.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib/btaudio_offload_if.so
+vendor/lib/libbluetooth_audio_session_qti.so
+vendor/lib/libbluetooth_audio_session_qti_2_1.so
+vendor/lib64/hw/audio.bluetooth_qti.default.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
+vendor/lib64/btaudio_offload_if.so
+vendor/lib64/libbluetooth_audio_session_qti.so
+vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 
 # CDSP
 vendor/bin/cdsprpcd
