@@ -7,3 +7,6 @@ allow system_server app_zygote:process { getpgid };
 allow system_server sysfs_kgsl:lnk_file { read };
 allow system_server media_rw_data_file:dir { setattr };
 allow system_server sysfs_livedisplay_tuneable:file { read write };
+
+# system_server is not allowed to getopt 'shell' type of unix_stream_socket
+dontaudit system_server shell:unix_stream_socket getopt;
