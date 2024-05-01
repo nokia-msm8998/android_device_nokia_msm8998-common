@@ -240,11 +240,11 @@ static int gpt_boot_chain_swap(const uint8_t *pentries_start,
         uint8_t *ptn_entry;
         uint8_t *ptn_bak_entry;
         uint8_t ptn_swap[PTN_ENTRY_SIZE];
-        //Skip the xbl partition on UFS devices. That is handled
+        //Skip the xbl, multiimgoem, multiimgqti partitions on UFS devices. That is handled
         //seperately.
-        if (gpt_utils_is_ufs_device() && !strncmp(ptn_swap_list[i],
-                                PTN_XBL,
-                                strlen(PTN_XBL)))
+        if (gpt_utils_is_ufs_device() && (!strncmp(ptn_swap_list[i],PTN_XBL,strlen(PTN_XBL))
+            || !strncmp(ptn_swap_list[i],PTN_MULTIIMGOEM,strlen(PTN_MULTIIMGOEM))
+            || !strncmp(ptn_swap_list[i],PTN_MULTIIMGQTI,strlen(PTN_MULTIIMGQTI))))
             continue;
 
         ptn_entry = gpt_pentry_seek(ptn_swap_list[i], pentries_start,
@@ -1005,9 +1005,9 @@ int prepare_boot_update(enum boot_update_stage stage)
                         //of being loaded based on well known GUID'S.
                         //We take care of switching the UFS boot LUN
                         //explicitly later on.
-                        if (!strncmp(ptn_swap_list[i],
-                                                PTN_XBL,
-                                                strlen(PTN_XBL)))
+                        if (!strncmp(ptn_swap_list[i],PTN_XBL,strlen(PTN_XBL))
+                            || !strncmp(ptn_swap_list[i],PTN_MULTIIMGOEM,strlen(PTN_MULTIIMGOEM))
+                            || !strncmp(ptn_swap_list[i],PTN_MULTIIMGQTI,strlen(PTN_MULTIIMGQTI)))
                                 continue;
                         snprintf(buf, sizeof(buf),
                                         "%s/%sbak",
@@ -1055,7 +1055,7 @@ int prepare_boot_update(enum boot_update_stage stage)
 
 //Given a parttion name(eg: rpm) get the path to the block device that
 //represents the GPT disk the partition resides on. In the case of emmc it
-//would be the default emmc dev(/dev/mmcblk0). In the case of UFS we look
+//would be the default emmc dev(/dev/block/mmcblk0). In the case of UFS we look
 //through the /dev/block/bootdevice/by-name/ tree for partname, and resolve
 //the path to the LUN from there.
 static int get_dev_path_from_partition_name(const char *partname,
@@ -1084,7 +1084,7 @@ static int get_dev_path_from_partition_name(const char *partname,
                         buf[PATH_TRUNCATE_LOC] = '\0';
                 }
         } else {
-                snprintf(buf, buflen, "/dev/mmcblk0");
+                snprintf(buf, buflen, BLK_DEV_FILE);
         }
         return 0;
 
@@ -1412,7 +1412,7 @@ int gpt_disk_get_disk_info(const char *dev, struct gpt_disk *dsk)
                                 dev);
                 goto error;
         }
-        fd = open(disk->devpath, O_RDWR);
+        fd = open(disk->devpath, O_RDWR | O_DSYNC);
         if (fd < 0) {
                 ALOGE("%s: Failed to open %s: %s",
                                 __func__,
@@ -1536,6 +1536,20 @@ int gpt_disk_commit(struct gpt_disk *disk)
                                 __func__);
                 goto error;
         }
+
+        //Write back the secondary header
+        if(gpt_set_header(disk->hdr_bak, fd, SECONDARY_GPT) != 0) {
+                ALOGE("%s: Failed to update secondary GPT header",
+                                __func__);
+                goto error;
+        }
+        //Write back the secondary partition array
+        if (gpt_set_pentry_arr(disk->hdr_bak, fd, disk->pentry_arr_bak)) {
+                ALOGE("%s: Failed to write secondary GPT partition arr",
+                                __func__);
+                goto error;
+        }
+        fsync(fd);
         close(fd);
         return 0;
 error:

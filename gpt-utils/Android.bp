@@ -14,8 +14,8 @@
 // limitations under the License.
 //
 
-cc_defaults {
-    name: "libgptutils_nokia_msm8998_defaults",
+cc_library {
+    name: "libgptutils.msm8998",
     vendor: true,
     recovery_available: true,
     shared_libs: [
@@ -36,14 +36,3 @@ cc_defaults {
     ],
     export_include_dirs: ["."],
 }
-
-cc_library {
-    name: "libgptutils.msm8998",
-    defaults: ["libgptutils_nokia_msm8998_defaults"],
-}
-
-cc_library {
-    name: "libgptutils.sdm660",
-    defaults: ["libgptutils_nokia_msm8998_defaults"],
-}
-

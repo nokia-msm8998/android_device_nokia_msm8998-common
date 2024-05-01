@@ -1,5 +1,6 @@
 # DPM
 persist.vendor.dpm.feature=11
 
-# Radio
-persist.vendor.qti.telephony.vt_cam_interface=2
+# Charging
+ro.charger.enable_suspend=1
+

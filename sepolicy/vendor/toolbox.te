@@ -1,1 +1,0 @@
-allow toolbox fih_partition:blk_file { read open };
