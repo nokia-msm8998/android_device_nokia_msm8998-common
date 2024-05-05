@@ -102,9 +102,6 @@ TARGET_USES_ION := true
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
-# DT2W
-TARGET_TAP_TO_WAKE_NODE := "/proc/AllHWList/tp_double_tap"
-
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_nokia
 TARGET_RECOVERY_DEVICE_MODULES := libinit_nokia
