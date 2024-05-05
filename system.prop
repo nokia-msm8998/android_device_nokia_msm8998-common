@@ -96,6 +96,7 @@ persist.sys.binary_xml=false
 # Wifi
 ro.boot.wificountrycode=US
 wifi.interface=wlan0
+wifi.interface.1=wlan1
 
 # Voice assistant
 ro.opa.eligible_device=true
