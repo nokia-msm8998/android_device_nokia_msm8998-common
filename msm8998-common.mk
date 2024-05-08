@@ -509,6 +509,7 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wcnss_service \
     WifiOverlay \
+    TetheringConfigOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 
