@@ -106,6 +106,3 @@ persist.dbg.ims_volte_enable=1
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
-
-# Do not block binder thread on incoming calls
-ro.telephony.block_binder_thread_on_incoming_calls=false
