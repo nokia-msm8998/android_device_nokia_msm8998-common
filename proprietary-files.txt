@@ -460,10 +460,6 @@ vendor/lib64/vendor.qti.gnss@3.0.so
 vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
 
-# Gatekeeper - from A1N_sprout - QKQ1.190828.002
-vendor/lib/hw/gatekeeper.msm8998.so|06260864e6e54b4d7eff8d80e49c3b229388746a
-vendor/lib64/hw/gatekeeper.msm8998.so|edfaffc6e289a998b955affd1d469f8a6c7b4a13
-
 # Graphics (Adreno) - from A1N_sprout - QKQ1.190828.002
 vendor/lib/egl/eglSubDriverAndroid.so|0281b6e172065bcf1f46dfb0ab23aee57df4f826
 vendor/lib/egl/libEGL_adreno.so|e8217b52ee66ffb2a091a2e81565dece057261e9
@@ -531,10 +527,6 @@ vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so
 
 # IRQ balance
 vendor/bin/msm_irqbalance
-
-# Keystore - from A1N_sprout - QKQ1.190828.002
-vendor/lib/hw/keystore.msm8998.so|7ce29b1848f7ff4875918f5bdc996910a8046c9d
-vendor/lib64/hw/keystore.msm8998.so|68be3e488242336bc3c8a85db4a0393a581e8846
 
 # Latency
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
