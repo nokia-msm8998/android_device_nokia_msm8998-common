@@ -1,12 +1,24 @@
 LOCAL_PATH:= $(call my-dir)
 
+ifneq ($(filter A1N B2N C1N CTL DDV DRG PL2 SLD TAS,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.fih.smartamp_init.sh
+LOCAL_MODULE       := fstab.qcom
 LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := EXECUTABLES
-LOCAL_SRC_FILES    := bin/init.fih.smartamp_init.sh
-LOCAL_VENDOR_MODULE    := true
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := etc/fstab.qcom
+LOCAL_REQUIRED_MODULES := fstab.qcom_ramdisk
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := fstab.qcom_ramdisk
+LOCAL_MODULE_STEM  := fstab.qcom
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := etc/fstab.qcom
+LOCAL_MODULE_PATH  := $(TARGET_RECOVERY_ROOT_OUT)/first_stage_ramdisk
+include $(BUILD_PREBUILT)
+endif
 
 include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qcom.early_boot.sh
@@ -49,14 +61,6 @@ LOCAL_VENDOR_MODULE    := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.fih.poweroff_charging.rc
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init.fih.poweroff_charging.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qcom.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
@@ -78,24 +82,6 @@ LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := etc/init.qcom.usb.rc
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := fstab.qcom
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/fstab.qcom
-LOCAL_REQUIRED_MODULES := fstab.qcom_ramdisk
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := fstab.qcom_ramdisk
-LOCAL_MODULE_STEM  := fstab.qcom
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/fstab.qcom
-LOCAL_MODULE_PATH  := $(TARGET_RECOVERY_ROOT_OUT)/first_stage_ramdisk
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
