@@ -27,11 +27,9 @@
 
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.target.rc
-import /vendor/etc/init/hw/init.fih.poweroff_charging.rc
 import /vendor/etc/init/hw/init.${ro.boot.device}.target.rc
 
 on early-init
-
   # Change ownership of hw_recovery related nodes
     chown system graphics /sys/kernel/debug/dri/0/debug/dump
     chown system graphics /sys/kernel/debug/dri/0/debug/recovery_reg
@@ -369,18 +367,6 @@ on post-fs-data
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
-    #+FIH@R3J168: FEATURE_FIH_C_NOKIA_001 (8998), by Pupu
-    # Create NOKIA mcfg related dirs
-    mkdir /data/vendor/fih_atl 2770 system root
-    mkdir /data/vendor/fih_mcfg 0775 system root
-
-    # RC for fih_atl
-    mkdir /data/vendor/fih_atl/modem_config 2770 system root
-    write /data/vendor/radio/atl_complete 0
-    chown system radio /data/vendor/radio/atl_complete
-    chmod 0660 /data/vendor/radio/atl_complete
-    #-FIH@R3J168: FEATURE_FIH_C_NOKIA_001 (8998), by Pupu
-
     # NFC storage
     mkdir /data/vendor/nfc 0770 nfc nfc
     mkdir /data/vendor/nfc/param 0770 nfc nfc
@@ -645,21 +631,6 @@ service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
-
-#+FIH@R3J168: FEATURE_FIH_C_NOKIA_001 (8998), by Pupu
-on property:persist.vendor.radio.nokia_fih_mcfg=1
-    # RC for fih_mcfg
-    write /data/vendor/fih_mcfg/fih_model.txt ${ro.build.display.id}
-    chown system vendor_rfs /data/vendor/fih_mcfg/fih_model.txt
-    chmod 0664 /data/vendor/fih_mcfg/fih_model.txt
-    write /data/vendor/fih_mcfg/mcfg_debug.log ${ro.vendor.build.date}
-    chown system vendor_rfs /data/vendor/fih_mcfg/mcfg_debug.log
-    chmod 0666 /data/vendor/fih_mcfg/mcfg_debug.log
-    write /data/vendor/fih_mcfg/rfs_complete 0
-    chown system vendor_rfs /data/vendor/fih_mcfg/rfs_complete
-    chmod 0666 /data/vendor/fih_mcfg/rfs_complete
-    chown system vendor_rfs /data/vendor/fih_mcfg
-#-FIH@R3J168: FEATURE_FIH_C_NOKIA_001 (8998), by Pupu
 
 service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
