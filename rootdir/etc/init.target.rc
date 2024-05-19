@@ -247,12 +247,6 @@ on property:sys.boot_completed=1
     write /sys/block/sda/queue/read_ahead_kb 128
     write /sys/block/sdf/queue/read_ahead_kb 128
 
-# Smartamp
-service amp-init-sh /vendor/bin/init.fih.smartamp_init.sh
-    class late_start
-    user system
-    oneshot
-
 #Peripheral manager
 service vendor.per_mgr /vendor/bin/pm-service
     class core
