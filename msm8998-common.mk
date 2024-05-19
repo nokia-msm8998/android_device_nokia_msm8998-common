@@ -264,9 +264,11 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
+ifneq ($(filter A1N NLA,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     $(COMMON_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+endif
 
 # OMX
 PRODUCT_PACKAGES += \
