@@ -392,17 +392,22 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.fih.smartamp_init.sh \
     init.qcom.early_boot.sh \
     init.qti.fm.sh \
     init.qti.ims.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
-    init.fih.poweroff_charging.rc \
     init.qcom.rc \
     init.target.rc \
     init.qcom.usb.rc \
     ueventd.qcom.rc
+
+# Ramdisk (FIH)
+ifneq ($(filter A1N NLA,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
+PRODUCT_PACKAGES += \
+    init.fih.smartamp_init.sh \
+    init.fih.poweroff_charging.rc
+endif
 
 # Ramdisk (fstab)
 ifneq ($(filter PL2 DDV DRG,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
