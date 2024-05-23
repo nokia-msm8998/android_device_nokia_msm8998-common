@@ -17,7 +17,6 @@
 /(vendor|system/vendor)/bin/gx_fpd      u:object_r:gx_fpd_exec:s0
 
 # HALs
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.nokia-libperfmgr                      u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock                      u:object_r:hal_power_stats_default_exec:s0
 
 # Partitions (A/B)
