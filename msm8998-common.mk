@@ -94,7 +94,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5 \
     android.hardware.camera.provider@2.6 \
-    vendor.qti.hardware.camera.device@1.0
+    vendor.qti.hardware.camera.device@1.0 \
+    libpng.vendor:32
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -171,7 +172,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1 \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.1 \
-    android.hardware.gnss@2.1.vendor
+    android.hardware.gnss@2.1.vendor \
+    libutils.vendor
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/gps/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
@@ -199,6 +201,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
+    libion.vendor
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -379,7 +382,8 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor \
     CarrierConfigOverlay \
     libxml2 \
-    librmnetctl
+    librmnetctl \
+    libsqlite.vendor:64
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -485,6 +489,7 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
     libandroid_net \
+    libnetutils.vendor \
     libwifi-hal-qcom \
     libwpa_client \
     wcnss_service \
