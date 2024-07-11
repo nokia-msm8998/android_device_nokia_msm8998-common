@@ -4,10 +4,6 @@ type public_adsprpcd_file, file_type;
 # FIH Partitions
 type fih_partition, dev_type;
 
-# Fingerprint
-type fingerprint_data_file, core_data_file_type, data_file_type, file_type;
-type gx_fpd_data_file, file_type, data_file_type;
-
 # DebugFS
 type debugfs_wlan, fs_type, debugfs_type;
 
@@ -20,6 +16,4 @@ type proc_fih, fs_type, proc_type;
 
 # Sysfs
 type sysfs_iio, sysfs_type, fs_type;
-type sysfs_ois, sysfs_type, fs_type;
-type sysfs_range, sysfs_type, fs_type;
 type sysfs_usb_device, sysfs_type, fs_type;
