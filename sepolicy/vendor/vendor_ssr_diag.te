@@ -1,2 +1,0 @@
-allow vendor_ssr_diag sysfs:file { open read };
-allow vendor_ssr_diag sysfs_data:file { open read };
