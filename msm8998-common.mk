@@ -127,7 +127,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    android.frameworks.displayservice@1.0 \
+    android.frameworks.displayservice@1.0.vendor \
     vendor.display.config@2.0.vendor
 
 # Dalvik
