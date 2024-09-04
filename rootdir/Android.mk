@@ -37,14 +37,6 @@ LOCAL_VENDOR_MODULE    := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.qti.ims.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := EXECUTABLES
-LOCAL_SRC_FILES    := bin/init.qti.ims.sh
-LOCAL_VENDOR_MODULE    := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qcom.sh
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := EXECUTABLES
