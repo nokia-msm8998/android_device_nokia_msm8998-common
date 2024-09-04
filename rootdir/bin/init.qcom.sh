@@ -140,7 +140,6 @@ start_msm_irqbalance()
 }
 
 baseband=`getprop ro.baseband`
-echo 1 > /proc/sys/net/ipv6/conf/default/accept_ra_defrtr
 
 case "$baseband" in
         "svlte2a")
