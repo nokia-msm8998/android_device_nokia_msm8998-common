@@ -400,8 +400,6 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wdsp0/boot
     chown media audio /sys/kernel/wcd_cpe0/fw_name
 
-    start qti-testscripts
-
     # Start perf
     setprop vendor.post_boot.parsed 1
 
@@ -522,13 +520,6 @@ service vendor.qcom-sh /vendor/bin/init.qcom.sh
     user root
     group root system radio oem_2903 oem_2904 vendor_rfs
     oneshot
-
-service qti-testscripts /system/bin/sh /system/etc/init.qcom.testscripts.sh
-    class late_start
-    user root
-    disabled
-    oneshot
-    seclabel u:r:qti-testscripts:s0
 
 service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
     class late_start
