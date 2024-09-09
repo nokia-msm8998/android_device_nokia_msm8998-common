@@ -39,7 +39,6 @@ on charger
     mkdir /config/usb_gadget/g1/configs/b.1/strings/0x409 0770
     write /config/usb_gadget/g1/configs/b.1/MaxPower 900
     symlink /config/usb_gadget/g1/configs/b.1 /config/usb_gadget/g1/os_desc/b.1
-    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.usb.sh
     setprop sys.usb.config mass_storage
     setprop sys.usb.configfs 1
 
@@ -114,7 +113,6 @@ on boot
     chown system system /sys/class/power_supply/usb/device/fih_otg_fun
     chmod 0664 /sys/class/power_supply/usb/device/fih_otg_fun
     
-    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.usb.sh
     setprop sys.usb.config ${persist.vendor.usb.config}
     setprop sys.usb.configfs 1
 

@@ -375,7 +375,6 @@ PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.qti.fm.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
     init.qcom.rc \
     init.target.rc \
     init.qcom.usb.rc \
