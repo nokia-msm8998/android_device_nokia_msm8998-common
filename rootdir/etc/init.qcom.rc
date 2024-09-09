@@ -588,9 +588,6 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     disabled
     oneshot
 
-on property:vendor.chre.enabled=0
-   stop chre
-
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
