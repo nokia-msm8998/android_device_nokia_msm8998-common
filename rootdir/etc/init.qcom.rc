@@ -521,12 +521,6 @@ service vendor.qcom-sh /vendor/bin/init.qcom.sh
     group root system radio oem_2903 oem_2904 vendor_rfs
     oneshot
 
-service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
-    class late_start
-    group wifi inet
-    disabled
-    oneshot
-
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
 
