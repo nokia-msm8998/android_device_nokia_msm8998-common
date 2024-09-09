@@ -494,12 +494,6 @@ service vendor.bt_logger /system/bin/bt_logger
    disabled
    oneshot
 
-service qmiproxy /system/bin/qmiproxy
-    class main
-    user radio
-    group radio diag
-    disabled
-
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
     user system
