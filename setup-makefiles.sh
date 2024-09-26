@@ -22,13 +22,13 @@ fi
 source "${HELPER}"
 
 # Initialize the helper for common
-setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true
+setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}"
 
 # Warning headers and guards
 write_headers "NB1 A1N B2N C1N CTL DDV DRG PL2 SLD TAS"
 
 # The standard common blobs
-write_makefiles "${MY_DIR}/proprietary-files.txt" true
+write_makefiles "${MY_DIR}/proprietary-files.txt"
 
 # Finish
 write_footers
