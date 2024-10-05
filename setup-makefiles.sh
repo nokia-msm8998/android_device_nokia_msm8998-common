@@ -22,6 +22,17 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function vendor_imports() {
+    cat <<EOF >>"$1"
+		"device/nokia/msm8998-common",
+		"hardware/qcom-caf/common/libqti-perfd-client",
+		"hardware/qcom-caf/msm8998",
+		"hardware/qcom-caf/wlan",
+		"vendor/qcom/opensource/dataservices",
+                "vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um",
+EOF
+}
+
 # Initialize the helper for common
 setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true
 
