@@ -1,8 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2023 The LineageOS Project
-#
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -22,19 +21,20 @@ fi
 source "${HELPER}"
 
 # Initialize the helper for common
-setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}"
+setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
 write_headers "NB1 A1N B2N C1N CTL DDV DRG PL2 SLD TAS"
 
 # The standard common blobs
-write_makefiles "${MY_DIR}/proprietary-files.txt"
+write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
 # Finish
 write_footers
 
 if [ -s "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
+    source "${MY_DIR}/../../${VENDOR}/${DEVICE}/setup-makefiles.sh"
     setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false
 
     # Warning headers and guards
