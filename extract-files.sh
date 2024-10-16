@@ -82,6 +82,7 @@ function blob_fixup() {
             return 1
             ;;
     esac
+
     return 0
 }
 
