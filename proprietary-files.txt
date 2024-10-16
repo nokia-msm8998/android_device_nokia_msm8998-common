@@ -163,7 +163,7 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 # DRM (Widevine)
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
@@ -221,12 +221,12 @@ vendor/lib/libhdr_tm.so|e69119603bff4a039242eead65279b3faf29ffa0
 vendor/lib64/libhdr_tm.so|ac4c943ba0c9793e53fc0b4eecf78ebb90eb28bf
 
 # Graphics (SDM) - from dumpling - QKQ1.191014.012
--vendor/lib/libsdm-disp-vndapis.so|a982cb75f67f688353bc39e8d77cb2e9879e3bbb
+vendor/lib/libsdm-disp-vndapis.so|a982cb75f67f688353bc39e8d77cb2e9879e3bbb
 vendor/lib64/libqseed3.so|6779aaf96283e244122f4cc76cd3cb750ff14ed5
 vendor/lib64/libsdedrm.so|f007903083a95cba32372df7404cbf0d39abe2a7
 vendor/lib64/libsdm-color.so|9bfc08c837db828cbc6a80c9c15c87bfdb62b90c
 vendor/lib64/libsdm-diag.so|db4c495e3e64ea0cbc0d079a2aa16862a9b02192
--vendor/lib64/libsdm-disp-vndapis.so|92fe3602eaaae1847965e8886d2cbef3d0a801f8
+vendor/lib64/libsdm-disp-vndapis.so|92fe3602eaaae1847965e8886d2cbef3d0a801f8
 vendor/lib64/libsdmextension.so|7d0a49fd74e4b4d93a3d379267372ceaa79ca264
 vendor/lib64/libtinyxml2_1.so|70942325afdd14eedcf11b3fbbfbc3d98f42f8dc
 
@@ -237,7 +237,7 @@ vendor/lib64/hw/vulkan.msm8998.so|d9c347b5fcd1c821c4b1d958a82f1b992257f127
 # Health
 vendor/bin/hw/android.hardware.health@2.1-service
 vendor/etc/init/android.hardware.health@2.1-service.rc
--vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
+vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
 vendor/lib/hw/android.hardware.health@2.0-impl-2.1.so
 vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so
 
@@ -342,10 +342,10 @@ vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 vendor/lib/libqmi.so
 vendor/lib/libqmiservices.so
--vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
--vendor/lib/libqmi_common_so.so
+vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/libqmi_encdec.so
@@ -361,10 +361,10 @@ vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/libqmi.so
 vendor/lib64/libqmiservices.so
--vendor/lib64/libqmi_cci.so
+vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_client_helper.so
 vendor/lib64/libqmi_client_qmux.so
--vendor/lib64/libqmi_common_so.so
+vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_csvt_srvc.so
 vendor/lib64/libqmi_encdec.so
@@ -551,11 +551,11 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
 vendor/etc/thermal-engine.conf
--vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalfeature.so
 
 # Time services
--vendor/app/TimeService/TimeService.apk
+vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
