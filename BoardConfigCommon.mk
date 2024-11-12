@@ -159,9 +159,6 @@ endif
 # Vendor security patch level
 VENDOR_SECURITY_PATCH := 2022-10-01
 
-# VNDK
-BOARD_VNDK_VERSION := current
-
 # Wifi
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
