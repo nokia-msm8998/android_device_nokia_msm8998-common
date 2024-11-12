@@ -129,7 +129,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4 \
     android.hardware.drm@1.4.vendor \
-    android.hardware.drm-service.clearkey
+    android.hardware.drm-service.clearkey \
+    libcrypto_shim.vendor
 
 # Enforce VINTF kernel requirements
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true

@@ -74,6 +74,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
             ;;
+        vendor/lib64/mediadrm/libwvdrmengine.so|vendor/lib64/libwvhidl.so)
+            [ "$2" = "" ] && return 0
+            grep -q libcrypto_shim.so "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;
         product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml|product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
             [ "$2" = "" ] && return 0
             sed -i 's/version="2.0"/version="1.0"/g' "${2}"
