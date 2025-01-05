@@ -226,7 +226,6 @@ vendor/lib64/libllvm-glnext.so|265407ef00d5f8bfa88f3344e01509cbd400d892
 vendor/lib64/libllvm-qcom.so|9edf73bb60a1e75554dbfbc5d5b63df14fe12cda
 
 # Graphics (HDR) - from A1N_sprout - QKQ1.190828.002
-vendor/lib/libhdr_tm.so|8d253c28c1fd976ac009088e36d483c16566f9a5
 vendor/lib64/libhdr_tm.so|1e74de5b505c8f742f1fb0379725ec9f5fd53282
 
 # Graphics (SDM) - from A1N_sprout - QKQ1.190828.002
@@ -259,10 +258,6 @@ vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/vendor.qti.latency@2.1.so
 
 # Media
-system_ext/lib/libmmosal.so
-system_ext/lib/libmmparser_lite.so
-system_ext/lib64/libmmosal.so
-system_ext/lib64/libmmparser_lite.so
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libdsd2pcm.so
@@ -345,7 +340,6 @@ vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libminkdescriptor.so
 vendor/lib/libminksocket.so
-vendor/lib/libqcc_file_agent.so
 vendor/lib/libqcci_legacy.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
@@ -383,6 +377,7 @@ vendor/lib64/libqmi_legacy.so
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
+vendor/lib/libdisplayconfig.qti.so
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
@@ -416,6 +411,8 @@ vendor/etc/data/netmgr_config.xml
 vendor/etc/Diag.cfg
 vendor/etc/init/qcrild.rc
 vendor/lib/libmdmdetect.so
+vendor/lib/libqrtr.so
+vendor/lib/libqcbor.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/liblqe.so
@@ -428,6 +425,7 @@ vendor/lib64/libnlnetmgr.so
 vendor/lib64/liboemaids_vendor.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
+vendor/lib64/libqcbor.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqcrilFramework.so
@@ -571,8 +569,17 @@ vendor/lib64/libtime_genoff.so
 # UBWC
 vendor/lib/libstreamparser.so
 vendor/lib/libUBWC.so
+vendor/lib/libvideoutils.so
 
 # VPP
+vendor/lib/libvpphvx.so
+vendor/lib/libvpplibrary.so
+vendor/lib/libmmsw_detail_enhancement.so
+vendor/lib/libmmsw_math.so
+vendor/lib/libmmsw_opencl.so
+vendor/lib/libmmsw_platform.so
+vendor/lib/vendor.qti.hardware.vpp@1.1.so
+vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/libvpphvx.so
 vendor/lib64/libvpplibrary.so
 vendor/lib64/libmmsw_detail_enhancement.so
@@ -585,3 +592,8 @@ vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 # Wi-Fi
 vendor/bin/cnss_diag
 vendor/bin/cnss-daemon
+
+# Wi-Fi Display
+vendor/lib/libwfdcommonutils_proprietary.so
+vendor/lib/libwfddisplayconfig_proprietary.so
+vendor/lib/libwfdmmservice.so
