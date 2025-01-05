@@ -53,18 +53,12 @@ PRODUCT_COPY_FILES += \
 
 # ANT+
 PRODUCT_PACKAGES += \
-    AntHalService-Soong \
-    com.dsi.ant@1.0.vendor
+    AntHalService-Soong
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0 \
-    android.hardware.bluetooth@1.0.vendor \
     audio.bluetooth.default \
-    android.hardware.bluetooth.audio-impl \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor \
-    vendor.qti.hardware.bluetooth_audio@2.1
+    android.hardware.bluetooth.audio-impl
 
 # Boot control
 PRODUCT_PACKAGES += \
@@ -82,14 +76,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.common@1.0 \
-    android.hardware.camera.device@3.4 \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.provider@2.5 \
-    android.hardware.camera.provider@2.6 \
-    vendor.qti.hardware.camera.device@1.0 \
-    libpng.vendor:32
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -103,10 +91,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gralloc.$(TARGET_NOKIA_PLATFORM) \
     hwcomposer.$(TARGET_NOKIA_PLATFORM) \
-    libdisplayconfig \
-    libtinyxml \
-    libqdMetaData \
-    libqdMetaData.system \
     libsdmcore \
     libsdmutils \
     vendor.qti.hardware.memtrack-service
@@ -116,18 +100,14 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl \
-    android.frameworks.displayservice@1.0.vendor \
-    vendor.display.config@2.0.vendor
+    android.frameworks.displayservice@1.0.vendor
 
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4 \
-    android.hardware.drm@1.4.vendor \
-    android.hardware.drm-service.clearkey \
-    libcrypto_shim.vendor
+    android.hardware.drm-service.clearkey
 
 # Enforce VINTF kernel requirements
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
@@ -188,17 +168,13 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0.vendor \
     android.hidl.allocator@1.0 \
     android.hidl.allocator@1.0.vendor \
-    libhidltransport \
-    libhidltransport.vendor \
     libhwbinder \
     libhwbinder.vendor
 
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
-    ims_ext_common.xml \
-    libion.vendor \
-    libgui_shim
+    ims_ext_common.xml
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -253,7 +229,6 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libavservices_minijail.vendor \
     libc2dcolorconvert \
     libmm-omxcore \
     libOmxAacEnc \
@@ -323,7 +298,6 @@ endif
 
 # Protobuf
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # Public libraries
@@ -345,11 +319,6 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson
-
-PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
@@ -362,16 +331,11 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/telephony_product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephony_product_privapp-permissions-qti.xml \
     $(COMMON_PATH)/configs/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 
-# Radio
+# Runtime resource overlays
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.2.vendor \
     CarrierConfigOverlay \
-    libxml2 \
-    librmnetctl \
-    libsqlite.vendor:64
+    WifiOverlay \
+    TetheringConfigOverlay
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -401,10 +365,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
-    android.frameworks.sensorservice@1.0 \
-    android.frameworks.sensorservice@1.0.vendor \
-    libsensorndkbridge \
-    libpower.vendor
+    libsensorndkbridge
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
@@ -441,10 +402,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
-# TinyXML
-PRODUCT_PACKAGES += \
-    libtinyxml
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service.dual_role_usb
@@ -452,11 +409,6 @@ PRODUCT_PACKAGES += \
 # Verity
 # Only needed for signing
 BOARD_AVB_ENABLE := false
-
-# VNDK
-PRODUCT_PACKAGES += \
-    libstdc++_vendor \
-    libutils-v33
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -467,18 +419,11 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1 \
-    android.system.net.netd@1.1.vendor \
-    android.hardware.wifi.hostapd@1.0.vendor \
     android.hardware.wifi-service \
     hostapd \
-    libandroid_net \
-    libnetutils.vendor \
     libwifi-hal-qcom \
     libwpa_client \
     wcnss_service \
-    WifiOverlay \
-    TetheringConfigOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 
