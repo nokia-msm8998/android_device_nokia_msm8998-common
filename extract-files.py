@@ -39,6 +39,8 @@ lib_fixups: lib_fixups_user_type = {
         'com.qualcomm.qti.dpm.api@1.0',
         'vendor.qti.hardware.fm@1.0',
         'vendor.qti.imsrtpservice@3.0',
+        'vendor.qti.hardware.qccsyshal@1.0',
+        'vendor.qti.hardware.qccvndhal@1.0',
     ): lib_fixup_vendor_suffix,
     (
 	'libdrmutils',
