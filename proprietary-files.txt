@@ -2,25 +2,25 @@
 ## are from DDV_sprout (00WW_3_690_SP07).
 
 # Current libraries with ELF checks disabled:
-# libadsp_hvx_stub and libadsp_hvx_callback_skel depends on libmmcamera_dbg, which is shipped on all target but highly device specific
-# libOmxVpp depends on libmm-omxcore, which is a GNU Makefile target
 # libOmxVideoDSMode depends on libOmxCore, which is a GNU Makefile target
+# libOmxVpp depends on libmm-omxcore, which is a GNU Makefile target
+# libadsp_hvx_stub and libadsp_hvx_callback_skel depends on libmmcamera_dbg, which is shipped on all target but highly device specific
 # libcne, libwqe, imsdatadaemon depend on libwpa_client, which is a GNU Makefile target
 # libril-qcril-hook-oem depends on libril, which is a GNU Makefile target
-# libsdm-disp-vndapis, libsdm-color, libsdm-diag, libsdmextension depends on libsdmutils, which is a GNU Makefile target
 # libsdedrm depends on libdrmutils, which is a GNU Makefile target
+# libsdm-disp-vndapis, libsdm-color, libsdm-diag, libsdmextension depends on libsdmutils, which is a GNU Makefile target
 
 # ADSP
 vendor/bin/adsprpcd
-vendor/lib/libadsprpc.so
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsp_hvx_callback_skel.so;DISABLE_CHECKELF
 vendor/lib/libadsp_hvx_stub.so;DISABLE_CHECKELF
+vendor/lib/libadsprpc.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libsdsprpc.so
-vendor/lib64/libadsprpc.so
 vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
@@ -144,17 +144,17 @@ vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor|d9f1aa7f93b92
 vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
 
 # DRM
-vendor/lib64/libbase64.so
-vendor/lib64/libcpion.so
 vendor/lib64/libGPQTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
+vendor/lib64/libSecureUILib.so
+vendor/lib64/libStDrvInt.so
+vendor/lib64/libbase64.so
+vendor/lib64/libcpion.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libqisl.so
 vendor/lib64/librmp.so
 vendor/lib64/libsecureui.so
-vendor/lib64/libSecureUILib.so
 vendor/lib64/libsecureui_svcsock.so
-vendor/lib64/libStDrvInt.so
 vendor/lib64/libtzdrmgenprov.so
 
 # DRM (HDCP)
@@ -256,14 +256,14 @@ vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so
 vendor/bin/msm_irqbalance
 
 # Media
+vendor/lib/libOmxVideoDSMode.so;DISABLE_CHECKELF
+vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal.so
 vendor/lib/libmulawdec.so
-vendor/lib/libOmxVideoDSMode.so;DISABLE_CHECKELF
-vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
+vendor/lib64/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libmmosal.so
-vendor/lib64/libOmxVpp.so;DISABLE_CHECKELF
 
 # Pasrmanager
 vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
@@ -351,11 +351,11 @@ vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libQSEEComAPI.so
+vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
-vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
 # Radio - from FP3 - 6.A.031.2
@@ -523,31 +523,31 @@ vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # UBWC
-vendor/lib/libstreamparser.so
 vendor/lib/libUBWC.so
+vendor/lib/libstreamparser.so
 vendor/lib/libvideoutils.so
 
 # VPP
-vendor/lib/libvpphvx.so
-vendor/lib/libvpplibrary.so
 vendor/lib/libmmsw_detail_enhancement.so
 vendor/lib/libmmsw_math.so
 vendor/lib/libmmsw_opencl.so
 vendor/lib/libmmsw_platform.so
+vendor/lib/libvpphvx.so
+vendor/lib/libvpplibrary.so
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
-vendor/lib64/libvpphvx.so
-vendor/lib64/libvpplibrary.so
 vendor/lib64/libmmsw_detail_enhancement.so
 vendor/lib64/libmmsw_math.so
 vendor/lib64/libmmsw_opencl.so
 vendor/lib64/libmmsw_platform.so
+vendor/lib64/libvpphvx.so
+vendor/lib64/libvpplibrary.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 
 # Wi-Fi
-vendor/bin/cnss_diag
 vendor/bin/cnss-daemon
+vendor/bin/cnss_diag
 
 # Wi-Fi Display
 vendor/lib/libwfdcommonutils_proprietary.so
