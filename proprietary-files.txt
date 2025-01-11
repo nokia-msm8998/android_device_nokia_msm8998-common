@@ -6,8 +6,6 @@
 # libOmxVpp depends on libmm-omxcore, which is a GNU Makefile target
 # libadsp_hvx_stub and libadsp_hvx_callback_skel depends on libmmcamera_dbg, which is shipped on all target but highly device specific
 # libcne, libwqe, imsdatadaemon depend on libwpa_client, which is a GNU Makefile target
-# libsdedrm depends on libdrmutils, which is a GNU Makefile target
-# libsdm-disp-vndapis, libsdm-color, libsdm-diag, libsdmextension depends on libsdmutils, which is a GNU Makefile target
 
 # ADSP
 vendor/bin/adsprpcd
@@ -231,13 +229,13 @@ vendor/lib64/libllvm-qcom.so|9edf73bb60a1e75554dbfbc5d5b63df14fe12cda
 vendor/lib64/libhdr_tm.so|1e74de5b505c8f742f1fb0379725ec9f5fd53282
 
 # Graphics (SDM) - from A1N_sprout - QKQ1.190828.002
-vendor/lib/libsdm-disp-vndapis.so;DISABLE_CHECKELF|15a98ef885dbd29935b1107d7a2988ae495abb87
+vendor/lib/libsdm-disp-vndapis.so|15a98ef885dbd29935b1107d7a2988ae495abb87
 vendor/lib64/libqseed3.so|24ae4dfe5d9fa27a858b64dfafd1c713da6e6fde
-vendor/lib64/libsdedrm.so;DISABLE_CHECKELF|8df03ed75d59ad0ae25dd1daa5ba9298a0e4d9ae
-vendor/lib64/libsdm-color.so;DISABLE_CHECKELF|ed022cfcc1546c11b82991986e0a938464400858
-vendor/lib64/libsdm-diag.so;DISABLE_CHECKELF|6eb99b83036f917070393fa067eaebc50a5ff307
-vendor/lib64/libsdm-disp-vndapis.so;DISABLE_CHECKELF|ba4978c373f9892d884d07c4cf25dba9d73fda1f
-vendor/lib64/libsdmextension.so;DISABLE_CHECKELF|69028df8b08ded29b835453b84e9a9c4fea958d1
+vendor/lib64/libsdedrm.so|8df03ed75d59ad0ae25dd1daa5ba9298a0e4d9ae
+vendor/lib64/libsdm-color.so|ed022cfcc1546c11b82991986e0a938464400858
+vendor/lib64/libsdm-diag.so|6eb99b83036f917070393fa067eaebc50a5ff307
+vendor/lib64/libsdm-disp-vndapis.so|ba4978c373f9892d884d07c4cf25dba9d73fda1f
+vendor/lib64/libsdmextension.so|69028df8b08ded29b835453b84e9a9c4fea958d1
 vendor/lib64/libtinyxml2_1.so|ba981e332895a053a67fc54a8190365a3ad37f2d
 
 # Graphics (Vulkan) - from A1N_sprout - QKQ1.190828.002
