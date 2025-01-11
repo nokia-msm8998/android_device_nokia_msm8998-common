@@ -83,9 +83,6 @@ BOARD_QTI_CAMERA_32BIT_ONLY := true
 
 # Display
 BOARD_USES_ADRENO := true
-TARGET_USES_GRALLOC1 := true
-TARGET_USES_HWC2 := true
-TARGET_USES_ION := true
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -109,6 +106,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
+
+# Media
+TARGET_USES_ION := true
 
 # Properties
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop

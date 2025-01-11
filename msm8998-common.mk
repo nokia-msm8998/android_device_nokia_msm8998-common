@@ -90,7 +90,7 @@ PRODUCT_PACKAGES += \
 # Display
 PRODUCT_PACKAGES += \
     gralloc.$(TARGET_NOKIA_PLATFORM) \
-    hwcomposer.$(TARGET_NOKIA_PLATFORM) \
+    hwcomposer.qcom \
     libsdmcore \
     libsdmutils \
     vendor.qti.hardware.memtrack-service
