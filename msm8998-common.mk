@@ -195,9 +195,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-impl \
-    android.hardware.light@2.0-service \
-    lights.$(TARGET_NOKIA_PLATFORM)
+    android.hardware.light-service.lineage
 
 # Lineage Health
 PRODUCT_PACKAGES += \
