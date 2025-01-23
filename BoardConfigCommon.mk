@@ -29,11 +29,8 @@ AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
     boot \
-    system
-
-ifeq ($(filter NB1,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
-AB_OTA_PARTITIONS += vendor
-endif
+    system \
+    vendor
 
 # Audio
 AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
@@ -120,7 +117,6 @@ TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
 BOARD_USES_METADATA_PARTITION := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_FLASH_BLOCK_SIZE := 262144
-BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -151,10 +147,11 @@ include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 
-# Vendor
-ifneq ($(PRODUCT_FULL_TREBLE_OVERRIDE), true)
-TARGET_COPY_OUT_VENDOR := vendor
+# Treble
+ifeq ($(filter NB1,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
+BOARD_VENDORIMAGE_PARTITION_TYPE := ext4
 endif
+TARGET_COPY_OUT_VENDOR := vendor
 
 # Vendor security patch level
 VENDOR_SECURITY_PATCH := 2022-10-01
