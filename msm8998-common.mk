@@ -342,19 +342,16 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.sh \
     init.qcom.rc \
+    init.recovery.qcom.rc \
     init.target.rc \
     init.qcom.usb.rc \
     ueventd.qcom.rc
 
 ifeq ($(filter NB1,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
-    $(COMMON_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom
+    $(COMMON_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
+    $(COMMON_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom
 endif
-
-# Recovery
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/etc/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
 # Seccomp
 PRODUCT_COPY_FILES += \
