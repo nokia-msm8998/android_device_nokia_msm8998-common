@@ -48,7 +48,7 @@ BOARD_HAVE_QCOM_FM := true
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
-LOC_HIDL_VERSION := 4.0
+LOC_HIDL_VERSION := 3.0
 
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom msm_rtb.filter=0x37 ehci-hcd.park=3
