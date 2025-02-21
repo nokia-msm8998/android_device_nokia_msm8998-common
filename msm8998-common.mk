@@ -62,13 +62,8 @@ PRODUCT_PACKAGES += \
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl.recovery \
-    bootctrl.$(TARGET_NOKIA_PLATFORM).recovery
-
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service \
-    bootctrl.$(TARGET_NOKIA_PLATFORM)
+    android.hardware.boot-service.qti \
+    android.hardware.boot-service.qti.recovery
 
 # Boot animation resolution
 TARGET_SCREEN_HEIGHT := 1920
