@@ -134,19 +134,22 @@ endif
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.0-impl-qti \
-    android.hardware.gnss@2.0-service-qti \
+    android.hardware.gnss@2.1-impl-qti \
+    android.hardware.gnss@2.1-service-qti \
+    gnss@2.0-base.policy \
+    gnss@2.0-xtra-daemon.policy \
+    gnss@2.0-xtwifi-client.policy \
+    gnss@2.0-xtwifi-inet-agent.policy \
     libbatching \
     libgeofencing \
     libgnss \
-    libgps.utils \
-    liblocation_api \
-    libwifi-hal-ctrl
+    libgnsspps \
+    libsynergy_loc_api
 
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/gps/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
-    $(COMMON_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
-    $(COMMON_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
+PRODUCT_PACKAGES += \
+    flp.conf \
+    gnss_antenna_info.conf \
+    gps.conf
 
 # HIDL
 PRODUCT_PACKAGES += \
