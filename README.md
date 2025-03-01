@@ -17,6 +17,10 @@ This is the Android device configuration for Nokia MSM8998 and SDM660 platform.
 | Nokia 6.2                | SLD      |
 | Nokia X71                | TAS      |
 
-Copyright 2023 - The LineageOS Project
-
+```
+#
+# SPDX-FileCopyrightText: 2025 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+```
 
