@@ -53,6 +53,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'version="2.0"', r'version="1.0"'),
     ('vendor/lib64/mediadrm/libwvdrmengine.so','vendor/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    'vendor/etc/izat.conf': blob_fixup()
+        .patch_file('gps/0001-gps-izat-Disable-slim_daemon.patch'),
     'vendor/bin/pm-service': blob_fixup()
 	.add_needed('libutils-v33.so'),
     'system_ext/lib64/lib-imscamera.so': blob_fixup()
