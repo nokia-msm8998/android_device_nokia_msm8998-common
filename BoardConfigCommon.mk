@@ -43,9 +43,6 @@ BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
-# FM
-BOARD_HAVE_QCOM_FM := true
-
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 
