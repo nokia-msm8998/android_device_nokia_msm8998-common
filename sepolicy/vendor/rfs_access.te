@@ -1,0 +1,2 @@
+allow rfs_access rfs_shared_hlos_file:dir create_dir_perms;
+allow rfs_access rfs_shared_hlos_file:file create_file_perms;

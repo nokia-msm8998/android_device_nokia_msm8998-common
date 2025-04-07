@@ -9,6 +9,10 @@
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock                      u:object_r:hal_power_stats_default_exec:s0
 
+# Modem configs
+/data/vendor/fih_atl(/.*)?              u:object_r:rfs_shared_hlos_file:s0
+/data/vendor/fih_mcfg(/.*)?             u:object_r:rfs_shared_hlos_file:s0
+
 # Partitions (A/B)
 /dev/block/platform/soc/1da4000\.ufshc/by-name/cda_[ab]                        u:object_r:custom_ab_block_device:s0
 /dev/block/platform/soc/1da4000\.ufshc/by-name/nvdef_[ab]                      u:object_r:custom_ab_block_device:s0
