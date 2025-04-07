@@ -505,7 +505,7 @@ on property:persist.sys.xtra-daemon.enabled=*
 service vendor.qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
-    group root system radio oem_2903 oem_2904 vendor_rfs
+    group root system radio oem_2903 oem_2904
     oneshot
 
 on property:ro.vendor.ril.mbn_copy_completed=1
