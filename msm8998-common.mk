@@ -363,6 +363,13 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client
 
+# Symlinks
+PRODUCT_PACKAGES += \
+    firmware_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink \
+    rfs_msm_mpss_fih_rfs_data_vendor_fih_atl_symlink \
+    rfs_msm_mpss_fih_rfs_data_vendor_fih_mcfg_symlink
+
 # Telephony
 PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
@@ -408,11 +415,6 @@ PRODUCT_PACKAGES += \
     wcnss_service \
     wpa_supplicant \
     wpa_supplicant.conf
-
-# WiFi firmware symlinks
-PRODUCT_PACKAGES += \
-    firmware_wlan_mac.bin_symlink \
-    firmware_WCNSS_qcom_cfg.ini_symlink
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
