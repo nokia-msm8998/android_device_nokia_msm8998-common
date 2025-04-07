@@ -77,13 +77,6 @@ BOARD_USES_ADRENO := true
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
-# DT2W
-ifeq ($(filter DDV SLD,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
-TARGET_TAP_TO_WAKE_NODE := "/proc/AllHWList/tp_double_tap"
-else
-TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/wakeup_gesture_enable"
-endif
-
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_nokia
 TARGET_RECOVERY_DEVICE_MODULES := libinit_nokia
