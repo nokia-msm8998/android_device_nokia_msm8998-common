@@ -134,9 +134,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 
 # Treble
-ifeq ($(filter NB1,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
-BOARD_VENDORIMAGE_PARTITION_TYPE := ext4
-endif
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Vendor security patch level
