@@ -277,15 +277,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
-# Permissions (FIH)
-ifeq ($(filter DDV SLD,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/perms/com.evenwell.datacollect.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.evenwell.datacollect.xml \
-    $(COMMON_PATH)/configs/perms/com.fihtdc.datacollect.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.fihtdc.datacollect.xml \
-    $(COMMON_PATH)/configs/perms/com.fihtdc.hardware.sensor.hall.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.fihtdc.hardware.sensor.hall.xml \
-    $(COMMON_PATH)/configs/perms/com.fihtdc.inlifeui.settings.style.android.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.fihtdc.inlifeui.settings.style.android.xml
-endif
-
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
