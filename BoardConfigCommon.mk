@@ -81,9 +81,6 @@ TARGET_ENABLE_MEDIADRM_64 := true
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_nokia
 TARGET_RECOVERY_DEVICE_MODULES := libinit_nokia
 
-# Health
-TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/charging_enabled
-
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/framework_compatibility_matrix.xml \
