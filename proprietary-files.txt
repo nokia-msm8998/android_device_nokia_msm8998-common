@@ -378,11 +378,8 @@ vendor/lib64/libqsocket.so|0817c4699f08d2595971f8103776a369bd15580d
 vendor/lib64/libril-qc-logger.so|7f80da37d120faffd72838b76d74102c7321e3a3
 
 # Qseecom
-vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
-vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
 vendor/lib/libdisplayconfig.qti.so
-vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libQSEEComAPI.so
@@ -391,7 +388,6 @@ vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
-vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
 # Radio - from FP3 - 6.A.031.2
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|341ac4f8b754883df97f2e9920f1e9a255a6a160
