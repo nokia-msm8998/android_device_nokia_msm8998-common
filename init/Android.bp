@@ -3,19 +3,6 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-cc_library_static {
-    name: "libinit_nokia",
-    recovery_available: true,
-    srcs: ["libinit_nokia.cpp"],
-    include_dirs: [
-        "system/libbase/include",
-        "system/core/init"
-    ],
-    shared_libs: [
-        "libbase",
-    ]
-}
-
 // Init scripts
 
 sh_binary {
