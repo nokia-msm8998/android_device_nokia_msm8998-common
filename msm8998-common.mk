@@ -51,10 +51,6 @@ PRODUCT_COPY_FILES += \
     hardware/qcom-caf/$(TARGET_NOKIA_PLATFORM)/audio/configs/$(TARGET_NOKIA_PLATFORM)/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
     hardware/qcom-caf/$(TARGET_NOKIA_PLATFORM)/audio/configs/$(TARGET_NOKIA_PLATFORM)/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tavil.txt
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService-Soong
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
