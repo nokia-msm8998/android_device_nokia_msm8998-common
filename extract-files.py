@@ -18,9 +18,6 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
-import extract_utils.tools
-extract_utils.tools.DEFAULT_PATCHELF_VERSION = '0_9'
-
 namespace_imports = [
     'device/nokia/msm8998-common',
     'hardware/qcom-caf/common/libqti-perfd-client',
