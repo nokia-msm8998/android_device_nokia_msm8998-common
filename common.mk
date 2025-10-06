@@ -73,8 +73,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service
+    android.hardware.camera.provider-service_32.lineage
 
 # ConfigStore
 PRODUCT_PACKAGES += \
