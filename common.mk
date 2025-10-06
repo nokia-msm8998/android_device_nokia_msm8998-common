@@ -335,6 +335,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# UFFD GC
+OVERRIDE_ENABLE_UFFD_GC := false
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
