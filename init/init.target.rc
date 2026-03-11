@@ -263,6 +263,7 @@ on property:sys.shutdown.requested=*
 
 on charger
     start vendor.hvdcp_opti
+    setprop debug.fdsan warn_once
     setprop persist.sys.usb.config mass_storage
     setprop sys.usb.configfs 1
     start vendor.power_off_alarm

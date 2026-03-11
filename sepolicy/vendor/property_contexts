@@ -10,5 +10,8 @@ vendor.camera.skip_unconfigure.packagelist  u:object_r:vendor_camera_prop:s0
 # Display
 sdm.disable_hdr_lut_gen                 u:object_r:vendor_display_prop:s0
 
+# Modem config
+persist.vendor.radio.nokia_fih_mcfg          u:object_r:vendor_radio_prop:s0
+
 # Sensors
 persist.pressure.diff                   u:object_r:vendor_default_prop:s0
