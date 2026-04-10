@@ -14,9 +14,6 @@ persist.audio.fluence.voicecomm=true
 camera.disable_zsl_mode=1
 vendor.camera.aux.packagelist=com.evenwell.camera2,com.tools.alt,com.hmdglobal.camera2,org.codeaurora.snapcam
 
-# Charger
-ro.charger.enable_suspend=true
-
 # Data
 persist.data.netmgrd.qos.enable=true
 persist.data.iwlan.enable=true

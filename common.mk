@@ -147,6 +147,10 @@ PRODUCT_PACKAGES += \
     gnss_antenna_info.conf \
     gps.conf
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health-service.qti
+
 # Hotword Enrollment
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-hotword.xml
