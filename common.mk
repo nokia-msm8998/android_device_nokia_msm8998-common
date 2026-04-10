@@ -65,7 +65,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery
 
-$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+$(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
 # Boot animation resolution
 TARGET_SCREEN_HEIGHT := 1920
@@ -188,7 +188,7 @@ $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay-service.sdm
 
-$(call soong_config_set,livedisplay_sdm,enable_dm,false)
+$(call soong_config_set_bool,livedisplay_sdm,enable_dm,false)
 
 # Media
 PRODUCT_COPY_FILES += \
