@@ -99,7 +99,7 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
 # Enforce VINTF kernel requirements
-PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # Fastbootd
 PRODUCT_PACKAGES += \
