@@ -61,9 +61,6 @@ TARGET_KERNEL_SOURCE := kernel/nokia/msm8998
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
-# Build flags
-BUILD_BROKEN_DUP_RULES := true
-
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
